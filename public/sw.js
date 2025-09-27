@@ -1,11 +1,8 @@
 const CACHE_NAME = 'gvpl-technologies-v1';
 const urlsToCache = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/src/assets/video/hero.mp4',
-  '/src/assets/logo/gvpl_logo.png',
-  '/manifest.json'
+  '/manifest.json',
+  '/favicon.ico'
 ];
 
 // Install event - cache resources

@@ -1,18 +1,59 @@
+import { useState, useEffect } from 'react';
 import Button from '../../components/Button';
 import Typewriter from '../../components/Typewriter';
-import LazyVideo from '../../components/LazyVideo';
 import heroVideo from '../../assets/video/hero.mp4';
 
 const Hero = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(false);
+
+  useEffect(() => {
+    // Simple video loading without intersection observer for hero
+    const video = document.createElement('video');
+    video.preload = 'metadata';
+    video.src = heroVideo;
+    
+    video.addEventListener('loadedmetadata', () => {
+      setVideoLoaded(true);
+    });
+    
+    video.addEventListener('error', () => {
+      setVideoError(true);
+    });
+
+    return () => {
+      video.removeEventListener('loadedmetadata', () => {});
+      video.removeEventListener('error', () => {});
+    };
+  }, []);
+
   return (
     <section className="absolute top-0 left-0 w-full h-screen bg-black overflow-hidden z-10">
       {/* Video Background */}
       <div className="relative h-full">
-        <LazyVideo
-          src={heroVideo}
-          className="w-full h-full"
-          fallbackClassName="opacity-60"
-        />
+        {!videoError && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className={`w-full h-full object-cover opacity-60 transition-opacity duration-500 ${
+              videoLoaded ? 'opacity-60' : 'opacity-0'
+            }`}
+            onLoadedData={() => setVideoLoaded(true)}
+            onError={() => setVideoError(true)}
+          >
+            <source src={heroVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+        
+        {/* Fallback background for slow loading or error */}
+        {(!videoLoaded || videoError) && (
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-60"></div>
+        )}
+        
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
       </div>
 
