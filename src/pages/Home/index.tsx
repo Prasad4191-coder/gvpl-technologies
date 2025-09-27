@@ -8,9 +8,11 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <Services />
-        <Industries />
-        <Partners />
+        <div className="relative z-20">
+          <Services />
+          <Industries />
+          <Partners />
+        </div>
       </main>
     </>
   )

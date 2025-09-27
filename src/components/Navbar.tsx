@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo/gvpl_logo.png';
 import Button from './Button';
@@ -33,7 +33,20 @@ const Navbar = () => {
   const [mobileDropdown, setMobileDropdown] = useState('');
   const [hoverDropdown, setHoverDropdown] = useState('');
   const [visibleDropdown, setVisibleDropdown] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  // Scroll detection for navbar transparency
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   // Smooth transition for dropdown switching
   React.useEffect(() => {
@@ -61,7 +74,7 @@ const Navbar = () => {
       const colSize = Math.ceil(items.length / count);
       const columns = Array.from({ length: count }, (_, i) => items.slice(i * colSize, (i + 1) * colSize));
       return (
-        <div className="absolute left-1/2 top-full w-auto max-w-3xl mx-auto bg-white border border-gray-200 shadow-xl z-40 rounded-xl py-2 animate-fade-in overflow-hidden" style={{ transform: 'translateX(-50%)' }}>
+        <div className="dropdown-menu absolute left-1/2 top-full w-auto max-w-3xl mx-auto bg-white border border-gray-200 shadow-xl z-40 rounded-xl py-2 animate-fade-in overflow-hidden backdrop-blur-sm" style={{ transform: 'translateX(-50%)' }}>
           <div className={`flex gap-8 px-6 py-6`}>
             {columns.map((col, idx) => (
               <ul key={idx} className="flex-1 min-w-0 space-y-3">
@@ -88,7 +101,7 @@ const Navbar = () => {
     }
     // Default single column
     return (
-      <div className="absolute left-0 top-full min-w-[260px] bg-white border border-gray-200 shadow-xl z-40 rounded-xl py-2 animate-fade-in">
+      <div className="dropdown-menu absolute left-0 top-full min-w-[260px] bg-white border border-gray-200 shadow-xl z-40 rounded-xl py-2 animate-fade-in backdrop-blur-sm">
         <ul className="p-2">
           {items.map(({ label, href, description }) => (
             <li key={label}>
@@ -140,21 +153,34 @@ const Navbar = () => {
     </div>
   );
 
+  const isHomePage = location.pathname === '/';
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/90 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isHomePage
+        ? (isScrolled
+          ? 'bg-black/20 backdrop-blur-xl border-b border-white/10'
+          : 'navbar-transparent border-b border-transparent')
+        : 'bg-white/90 backdrop-blur-sm border-b border-gray-200'
+      }`}>
+      <div className={`max-w-7xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 ${isHomePage && !isScrolled ? 'navbar-transparent' : ''
+        }`}>
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="GVPL Technologies" className="h-10 w-auto" />
+          <img
+            src={logo}
+            alt="GVPL Technologies"
+            className={`w-auto transition-all duration-300 ${isHomePage && !isScrolled ? 'h-16' : 'h-12'
+              }`}
+          />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 relative">
-          <Link to="/" className={`px-3 py-2 font-medium transition-colors ${isActive('/') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-gray-700 hover:text-[#009DFF]'}`}>Home</Link>
-          <Link to="/about" className={`px-3 py-2 font-medium transition-colors ${isActive('/about') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-gray-700 hover:text-[#009DFF]'}`}>About</Link>
+          <Link to="/" className={`px-3 py-2 font-medium transition-colors ${isActive('/') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>Home</Link>
+          <Link to="/about" className={`px-3 py-2 font-medium transition-colors ${isActive('/about') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>About</Link>
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => setHoverDropdown('services')} onMouseLeave={() => setHoverDropdown('')}>
-            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/services') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-gray-700 hover:text-[#009DFF]'}`}>
+            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/services') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>
               Services <FaChevronDown className={`ml-1 h-3 w-3 transition-transform ${hoverDropdown === 'services' ? 'rotate-180' : ''}`} />
             </button>
             <div
@@ -177,7 +203,7 @@ const Navbar = () => {
           </div>
           {/* Industries Dropdown */}
           <div className="relative" onMouseEnter={() => setHoverDropdown('industries')} onMouseLeave={() => setHoverDropdown('')}>
-            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/industries') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-gray-700 hover:text-[#009DFF]'}`}>
+            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/industries') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>
               Industries <FaChevronDown className={`ml-1 h-3 w-3 transition-transform ${hoverDropdown === 'industries' ? 'rotate-180' : ''}`} />
             </button>
             <div
@@ -198,8 +224,8 @@ const Navbar = () => {
               {visibleDropdown === 'industries' && <DropdownMenu items={industriesLinks} multiColumn={industriesLinks.length > 6} columnsCount={3} />}
             </div>
           </div>
-          <Link to="/animation" className={`px-3 py-2 font-medium transition-colors ${isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-gray-700 hover:text-[#009DFF]'}`}>Animation Studio</Link>
-          <Link to="/contact" className={`px-3 py-2 font-medium transition-colors ${isActive('/contact') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-gray-700 hover:text-[#009DFF]'}`}>Contact Us</Link>
+          <Link to="/animation" className={`px-3 py-2 font-medium transition-colors ${isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>Animation Studio</Link>
+          <Link to="/contact" className={`px-3 py-2 font-medium transition-colors ${isActive('/contact') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>Contact Us</Link>
         </nav>
 
         {/* Desktop CTA */}
@@ -213,23 +239,28 @@ const Navbar = () => {
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
-          <FaBars className="h-6 w-6 text-[#009DFF]" />
+          <FaBars className={`h-6 w-6 ${isHomePage ? 'text-white' : 'text-[#009DFF]'}`} />
         </button>
       </div>
 
       {/* Mobile Drawer */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-50 bg-white flex w-full min-h-screen"
+          className="mobile-menu fixed inset-0 z-50 bg-white flex w-full min-h-screen"
           onClick={() => setMobileOpen(false)}
         >
           <div
-            className="w-full max-w-sm bg-white h-full shadow-lg p-6 flex flex-col animate-slide-in-right mx-auto"
+            className="mobile-menu w-full max-w-sm bg-white h-full shadow-2xl p-6 flex flex-col animate-slide-in-right mx-auto border-l border-gray-200"
             onClick={e => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-8">
               <Link to="/" onClick={() => setMobileOpen(false)}>
-                <img src={logo} alt="GVPL Technologies" className="h-10 w-auto" />
+                <img
+                  src={logo}
+                  alt="GVPL Technologies"
+                  className={`w-auto transition-all duration-300 ${isHomePage && !isScrolled ? 'h-12' : 'h-10'
+                    }`}
+                />
               </Link>
               <button
                 className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#009DFF]"
