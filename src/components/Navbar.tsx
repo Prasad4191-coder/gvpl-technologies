@@ -176,6 +176,7 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center gap-6 relative">
           <Link to="/" className={`px-3 py-2 font-medium transition-colors ${isActive('/') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>Home</Link>
           <Link to="/about" className={`px-3 py-2 font-medium transition-colors ${isActive('/about') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>About</Link>
+          <Link to="/careers" className={`px-3 py-2 font-medium transition-colors ${isActive('/careers') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>Career</Link>
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => setHoverDropdown('services')} onMouseLeave={() => setHoverDropdown('')}>
             <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/services') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>
@@ -271,6 +272,7 @@ const Navbar = () => {
             <nav className="flex flex-col gap-2">
               <Link to="/" className={isActive('/') ? 'text-[#009DFF] font-bold pointer-events-none py-2' : 'text-gray-700 hover:text-[#009DFF] py-2'} onClick={() => setMobileOpen(false)}>Home</Link>
               <Link to="/about" className={isActive('/about') ? 'text-[#009DFF] font-bold pointer-events-none py-2' : 'text-gray-700 hover:text-[#009DFF] py-2'} onClick={() => setMobileOpen(false)}>About</Link>
+              <Link to="/careers" className={isActive('/careers') ? 'text-[#009DFF] font-bold pointer-events-none py-2' : 'text-gray-700 hover:text-[#009DFF] py-2'} onClick={() => setMobileOpen(false)}>Career</Link>
               <MobileDropdown title="Services" items={servicesLinks} />
               <MobileDropdown title="Industries" items={industriesLinks} />
               <Link to="/animation" className={isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none py-2' : 'text-gray-700 hover:text-[#009DFF] py-2'} onClick={() => setMobileOpen(false)}>Animation Studio</Link>

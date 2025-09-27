@@ -24,9 +24,9 @@ const Footer = () => {
             <div className="mb-8 sm:mb-0 min-w-[140px]">
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/about" className="text-white/80 hover:text-white transition-colors">About Us</a></li>
                 <li><a href="#" className="text-white/80 hover:text-white transition-colors">Services</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">Careers</a></li>
+                <li><a href="/careers" className="text-white/80 hover:text-white transition-colors">Career</a></li>
                 <li><a href="#" className="text-white/80 hover:text-white transition-colors">Blog</a></li>
               </ul>
             </div>
@@ -64,7 +64,10 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-center gap-2">
           <p className="text-white/80 text-sm">©2024 GVPL Technologies . All right reserved</p>
-          <a href="#" className="text-white/80 hover:text-white text-sm">Terms of Services</a>
+          <div className="flex space-x-4">
+            <a href="/privacy-policy" className="text-white/80 hover:text-white text-sm">Privacy Policy</a>
+            <a href="#" className="text-white/80 hover:text-white text-sm">Terms of Services</a>
+          </div>
         </div>
       </div>
     </footer>

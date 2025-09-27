@@ -13,6 +13,8 @@ import PMC from './pages/Services/PMC';
 import RE from './pages/Services/RE';
 import ServiceCFD from './pages/Services/CFD';
 import AboutUs from './pages/AboutUs';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Careers from './pages/Careers';
 import IndustryDynamic from './pages/Industries/[slug]';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import Login from './pages/Admin/Login';
@@ -127,6 +129,16 @@ function AppContent() {
           <Route path="/about" element={
             <PageTransition>
               <AboutUs />
+            </PageTransition>
+          } />
+          <Route path="/privacy-policy" element={
+            <PageTransition>
+              <PrivacyPolicy />
+            </PageTransition>
+          } />
+          <Route path="/careers" element={
+            <PageTransition>
+              <Careers />
             </PageTransition>
           } />
         </Routes>
