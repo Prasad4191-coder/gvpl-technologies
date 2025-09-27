@@ -153,34 +153,32 @@ const Navbar = () => {
     </div>
   );
 
-  const isHomePage = location.pathname === '/';
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isHomePage
-        ? (isScrolled
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
           ? 'bg-black/20 backdrop-blur-xl border-b border-white/10'
-          : 'navbar-transparent border-b border-transparent')
-        : 'bg-white/90 backdrop-blur-sm border-b border-gray-200'
+          : 'navbar-transparent border-b border-transparent'
       }`}>
-      <div className={`max-w-7xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 ${isHomePage && !isScrolled ? 'navbar-transparent' : ''
+      <div className={`max-w-7xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 ${!isScrolled ? 'navbar-transparent' : ''
         }`}>
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
             src={logo}
             alt="GVPL Technologies"
-            className={`w-auto transition-all duration-300 ${isHomePage && !isScrolled ? 'h-16' : 'h-12'
+            className={`w-auto transition-all duration-300 ${!isScrolled ? 'h-16' : 'h-12'
               }`}
           />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 relative">
-          <Link to="/" className={`px-3 py-2 font-medium transition-colors ${isActive('/') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>Home</Link>
-          <Link to="/about" className={`px-3 py-2 font-medium transition-colors ${isActive('/about') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>About</Link>
+          <Link to="/" className={`px-3 py-2 font-medium transition-colors ${isActive('/') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>Home</Link>
+          <Link to="/about" className={`px-3 py-2 font-medium transition-colors ${isActive('/about') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>About</Link>
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => setHoverDropdown('services')} onMouseLeave={() => setHoverDropdown('')}>
-            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/services') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>
+            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/services') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>
               Services <FaChevronDown className={`ml-1 h-3 w-3 transition-transform ${hoverDropdown === 'services' ? 'rotate-180' : ''}`} />
             </button>
             <div
@@ -203,7 +201,7 @@ const Navbar = () => {
           </div>
           {/* Industries Dropdown */}
           <div className="relative" onMouseEnter={() => setHoverDropdown('industries')} onMouseLeave={() => setHoverDropdown('')}>
-            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/industries') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>
+            <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/industries') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>
               Industries <FaChevronDown className={`ml-1 h-3 w-3 transition-transform ${hoverDropdown === 'industries' ? 'rotate-180' : ''}`} />
             </button>
             <div
@@ -224,8 +222,8 @@ const Navbar = () => {
               {visibleDropdown === 'industries' && <DropdownMenu items={industriesLinks} multiColumn={industriesLinks.length > 6} columnsCount={3} />}
             </div>
           </div>
-          <Link to="/animation" className={`px-3 py-2 font-medium transition-colors ${isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>Animation Studio</Link>
-          <Link to="/contact" className={`px-3 py-2 font-medium transition-colors ${isActive('/contact') ? 'text-[#009DFF] font-bold pointer-events-none' : (isHomePage ? 'text-white hover:text-[#009DFF]' : 'text-gray-700 hover:text-[#009DFF]')}`}>Contact Us</Link>
+          <Link to="/animation" className={`px-3 py-2 font-medium transition-colors ${isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>Animation Studio</Link>
+          <Link to="/contact" className={`px-3 py-2 font-medium transition-colors ${isActive('/contact') ? 'text-[#009DFF] font-bold pointer-events-none' : 'text-white hover:text-[#009DFF]'}`}>Contact Us</Link>
         </nav>
 
         {/* Desktop CTA */}
@@ -239,7 +237,7 @@ const Navbar = () => {
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
-          <FaBars className={`h-6 w-6 ${isHomePage ? 'text-white' : 'text-[#009DFF]'}`} />
+          <FaBars className="h-6 w-6 text-white" />
         </button>
       </div>
 
@@ -258,7 +256,7 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="GVPL Technologies"
-                  className={`w-auto transition-all duration-300 ${isHomePage && !isScrolled ? 'h-12' : 'h-10'
+                  className={`w-auto transition-all duration-300 ${!isScrolled ? 'h-12' : 'h-10'
                     }`}
                 />
               </Link>

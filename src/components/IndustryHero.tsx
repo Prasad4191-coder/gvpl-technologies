@@ -8,7 +8,7 @@ interface IndustryHeroProps {
 }
 
 const IndustryHero: React.FC<IndustryHeroProps> = ({ title, subtitle, image, overlayText }) => (
-    <section className="relative w-full rounded-2xl overflow-hidden min-h-[260px] md:min-h-[340px] mt-5 mb-8 mx-auto max-w-7xl">
+    <section className="absolute top-0 left-0 w-full h-[50vh] overflow-hidden z-10">
         <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 flex flex-col justify-center h-full px-4 py-12 items-center text-center md:items-start md:text-left md:pl-12">

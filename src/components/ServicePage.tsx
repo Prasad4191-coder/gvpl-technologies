@@ -33,13 +33,13 @@ interface ServicePageProps {
 const ServicePage: React.FC<ServicePageProps> = ({ hero, intro, features, featuresTitle, featuresDescription, benefits, capabilitiesSection }) => (
     <div className="bg-white">
         {/* Hero Section */}
-        <section className="relative py-12 text-white text-center rounded-2xl mx-6 mt-5 mb-4 overflow-hidden min-h-[260px] flex items-center justify-center">
+        <section className="absolute top-0 left-0 w-full h-[50vh] text-white text-center overflow-hidden z-10 flex items-center justify-center">
             <img
                 src={hero.image}
                 alt="Hero"
-                className="absolute inset-0 w-full h-full object-cover rounded-b-2xl"
+                className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40 rounded-b-2xl" />
+            <div className="absolute inset-0 bg-black/40" />
             <div className="relative z-10 text-center text-white px-4">
                 <h1 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow">{hero.title}</h1>
                 <p className="text-lg md:text-2xl font-medium drop-shadow">{hero.subtitle}</p>
@@ -47,7 +47,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ hero, intro, features, featur
         </section>
 
         {/* Intro Paragraph */}
-        <div className="max-w-4xl mx-auto px-2 mb-12 text-center md:text-left">
+        <div className="max-w-4xl mx-auto px-2 mb-12 text-center md:text-left mt-[50vh] relative z-20">
             {Array.isArray(intro) ? (
                 intro.map((paragraph, index) => (
                     <p key={index} className="text-lg text-gray-700 mb-4 last:mb-0">
