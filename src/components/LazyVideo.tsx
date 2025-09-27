@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface LazyVideoProps {
   src: string;
@@ -18,7 +18,7 @@ const LazyVideo = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,26 +31,26 @@ const LazyVideo = ({
       { threshold: 0.1 }
     );
 
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
     }
 
     return () => observer.disconnect();
   }, []);
 
-  const handleLoad = () => {
+  const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
-  };
+  }, [onLoad]);
 
-  const handleError = () => {
+  const handleError = useCallback(() => {
     setHasError(true);
     onError?.();
-  };
+  }, [onError]);
 
   return (
     <div className={`relative ${className}`}>
-      <div ref={videoRef} className="w-full h-full">
+      <div ref={containerRef} className="w-full h-full">
         {isInView && !hasError && (
           <video
             autoPlay
