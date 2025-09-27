@@ -1,25 +1,23 @@
 import Button from '../../components/Button';
 import Typewriter from '../../components/Typewriter';
-import VideoFallback from '../../components/VideoFallback';
 import heroVideo from '../../assets/video/hero.mp4';
 
-// Fallback background images
-import Slide1 from '@/assets/gvpl website images/About/DetailingProduct.png';
-import Slide2 from '@/assets/gvpl website images/About/InnovativeEngineeringSolutions.png';
-import Slide3 from '@/assets/gvpl website images/About/GlobaltechnicalExcellence.png';
-
 const Hero = () => {
-  const fallbackImages = [Slide1, Slide2, Slide3];
 
   return (
     <section className="absolute top-0 left-0 w-full h-screen bg-black overflow-hidden z-10">
-      {/* Video Background with Fallback */}
+      {/* Video Background */}
       <div className="relative h-full">
-        <VideoFallback
-          videoSrc={heroVideo}
-          fallbackImages={fallbackImages}
-          className="opacity-60"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-60"
+        >
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
       </div>
 
