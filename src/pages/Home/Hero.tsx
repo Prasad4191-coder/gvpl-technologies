@@ -1,28 +1,36 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 import Button from '../../components/Button';
 import Typewriter from '../../components/Typewriter';
-import OptimizedVideo from '../../components/OptimizedVideo';
-import { usePerformance } from '../../hooks/usePerformance';
-import { preloadCriticalResources } from '../../utils/videoOptimization';
 import heroVideo from '../../assets/video/hero.mp4';
 
 const Hero = () => {
-  const { isSlowConnection, prefersReducedMotion } = usePerformance();
-
-  useEffect(() => {
-    // Preload critical resources
-    preloadCriticalResources();
-  }, []);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <section className="absolute top-0 left-0 w-full h-screen bg-black overflow-hidden z-10">
       {/* Video Background */}
       <div className="relative h-full">
-        <OptimizedVideo
-          src={heroVideo}
-          className="w-full h-full object-cover opacity-60"
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3C/svg%3E"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          onLoadedData={() => setVideoLoaded(true)}
+          className={`w-full h-full object-cover opacity-60 transition-opacity duration-500 ${
+            videoLoaded ? 'opacity-60' : 'opacity-0'
+          }`}
+        >
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Loading state */}
+        {!videoLoaded && (
+          <div className="absolute inset-0 bg-black flex items-center justify-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
       </div>
 
