@@ -1,6 +1,7 @@
 import Button from '../../components/Button';
 import Typewriter from '../../components/Typewriter';
 import heroVideo from '../../assets/video/hero.mp4';
+import heroVideo1 from '../../assets/video/hero_compressed.mp4';
 
 const Hero = () => {
 
@@ -15,7 +16,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover opacity-60"
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={heroVideo1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
