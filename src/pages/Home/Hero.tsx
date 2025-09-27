@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import Button from '../../components/Button';
 import Typewriter from '../../components/Typewriter';
 import heroVideo from '../../assets/video/hero.mp4';
 
 const Hero = () => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <section className="absolute top-0 left-0 w-full h-screen bg-black overflow-hidden z-10">
@@ -15,22 +13,11 @@ const Hero = () => {
           muted
           loop
           playsInline
-          preload="metadata"
-          onLoadedData={() => setVideoLoaded(true)}
-          className={`w-full h-full object-cover opacity-60 transition-opacity duration-500 ${
-            videoLoaded ? 'opacity-60' : 'opacity-0'
-          }`}
+          className="w-full h-full object-cover opacity-60"
         >
           <source src={heroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        
-        {/* Loading state */}
-        {!videoLoaded && (
-          <div className="absolute inset-0 bg-black flex items-center justify-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
-          </div>
-        )}
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
       </div>
 
