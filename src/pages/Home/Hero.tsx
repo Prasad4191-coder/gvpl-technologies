@@ -1,23 +1,18 @@
 import Button from '../../components/Button';
 import Typewriter from '../../components/Typewriter';
+import LazyVideo from '../../components/LazyVideo';
 import heroVideo from '../../assets/video/hero.mp4';
 
 const Hero = () => {
-
   return (
     <section className="absolute top-0 left-0 w-full h-screen bg-black overflow-hidden z-10">
       {/* Video Background */}
       <div className="relative h-full">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover opacity-60"
-        >
-          <source src={heroVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <LazyVideo
+          src={heroVideo}
+          className="w-full h-full"
+          fallbackClassName="opacity-60"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
       </div>
 
