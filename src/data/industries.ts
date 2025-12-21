@@ -82,6 +82,29 @@ import CHEPAV from '@/assets/gvpl website images/Industries/I-Chemical/Picture6.
 // Food
 import FOODIMG from '@/assets/gvpl website images/Industries/I-Food/I-Food.jpg';
 
+// HVAC images
+import HVACCFD from '@/assets/gvpl website images/Industries/I-HAVC/Picture2.png';
+import HVACTMH from '@/assets/gvpl website images/Industries/I-HAVC/Gemini_Generated_Image_bycktabycktabyck.png';
+import HVACTCR from '@/assets/gvpl website images/Industries/I-HAVC/Picture4.png';
+import HVACTFEA from '@/assets/gvpl website images/Industries/I-HAVC/Picture3.png';
+
+// Marine images
+import MARFFD from '@/assets/gvpl website images/Industries/I-Marine/I-Marine.jpg';
+
+// Pharma images
+import PHARFFD from '@/assets/gvpl website images/Industries/I-Pharma/Picture1.jpg';
+import PHARCH from '@/assets/gvpl website images/Industries/I-Pharma/Picture1.png';
+import PHARCCM from '@/assets/gvpl website images/Industries/I-Pharma/Picture2.png';
+import PHARST from '@/assets/gvpl website images/Industries/I-Pharma/Picture3.png';
+
+// Process Equipment images
+import PROFFD from '@/assets/gvpl website images/Industries/I-Process/Column.png';
+import PROFEA from '@/assets/gvpl website images/Industries/I-Process/Heat exchanger.png';
+
+
+// Real Estate
+import REIMG from '@/assets/gvpl website images/Industries/I-Real Estate/I-Real Estate.jpg';
+
 export const industries = [
     // Aerospace Engineering
     {
@@ -945,5 +968,586 @@ export const industries = [
                 image: ''
             }
         ]
+    },
+    // HVAC
+    {
+        slug: 'hvac',
+        title: 'HVAC',
+        description: '',
+        hero: {
+            title: 'Innovative HVAC Engineering Solutions with GVPL Technologies',
+            subtitle: 'At GVPL Technologies, we specialize in delivering advanced engineering solutions for the HVAC (Heating, Ventilation, and Air Conditioning) industry. From optimizing airflow to ensuring structural durability, our expertise enhances efficiency, safety, and comfort across diverse HVAC applications. Leveraging cutting-edge tools like Computational Fluid Dynamics (CFD) and structural analysis, we help create smarter, greener, and more reliable HVAC systems.',
+            image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+        },
+        expertise: {
+            title: 'Our Engineering Solutions for the Food Industry',
+            features: [
+                {
+                    title: 'Computational Fluid Dynamics (CFD)',
+                    description: 'Flow Dynamics & Process Optimization',
+                    image: HVACCFD,
+                    bullets: [
+                        'Velocity & Pressure Analysis: Identify turbulence, pressure losses, and inefficiencies in processing systems.',
+                        'Multiphase Flow Simulation: Optimize heat and mass transfer to improve ingredient mixing and ensure uniform temperature distribution.',
+                        'Spray Drying Process Optimization: Predict droplet size, spray patterns, and moisture evaporation rates for efficient drying.',
+                        'Pressure Drop Analysis: Reduce high resistance areas in food processing equipment like homogenizers and pasteurizers.'
+                    ]
+                },
+                {
+                    title: 'Thermal Management & Heat Transfer',
+                    description: '',
+                    image: HVACTMH,
+                    bullets: [
+                        'Temperature Distribution Analysis: Identify hotspots, cold spots, and uneven heat transfer in food processing systems.',
+                        'Forced Air Circulation: Optimize heat transfer rates to minimize energy consumption in ovens, freezers, and dryers.',
+                        'Valve Design Optimization: Ensure valves can withstand high - temperature fluids without compromising safety.'
+                    ]
+                },
+                {
+                    title: 'Clean room & Contamination Control',
+                    description: '',
+                    image: HVACTCR,
+                    bullets: [
+                        'Airflow Simulation: Optimize air speed and distribution to maintain hygiene and prevent contamination in cleanrooms.',
+                        'Contaminant Behavior Prediction: Track and control potential hazards in processing environments.'
+                    ]
+                },
+                {
+                    title: 'Finite Element Analysis (FEA) for Structural Integrity',
+                    description: 'Structural Durability & Fatigue Analysis',
+                    image: HVACTFEA,
+                    bullets: [
+                        'FEA for Pumps & Valves: Evaluate deformation and stress under various operational conditions to ensure longevity.',
+                        'Heat Exchanger & Pressure Vessel Analysis: Prevent thermal degradation by identifying weak points in food processing equipment.',
+                        'Fatigue Analysis: Assess the lifecycle of components like dryer vessels and pressure cookers, predicting failure risks due to cyclic pressures and thermal fluctuations.'
+                    ]
+                },
+                {
+                    title: 'Additional Engineering Solutions',
+                    description: '',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Acoustic Analysis: Minimize noise levels in processing plants to enhance worker safety.',
+                        'Cavitation Analysis: Prevent bubble formation and erosion in high - speed fluid systems.',
+                        'Shear Stress Distribution: Optimize mixing and blending processes for uniform consistency.',
+                        'Leak Detection: Identify potential weak points in fluid handlingsystems and pipelines to prevent contamination.',
+                        'Frost Formation Detection: Optimize refrigeration units to prevent unwanted ice buildup in freezers.'
+                    ]
+                }
+            ]
+        },
+        benefits: {
+            title: 'Why Choose GVPL Technologies?',
+            benefits: [
+                {
+                    icon: icon1,
+                    title: 'Advanced Analytical Techniques',
+                    desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
+                },
+                {
+                    icon: '',
+                    title: 'Experienced Team',
+                    desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
+                },
+                {
+                    icon: '',
+                    title: 'Confidentiality Assurance',
+                    desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
+                },
+                {
+                    icon: '',
+                    title: 'Customized Solutions',
+                    desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
+                }
+            ],
+            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+        },
+        industriesWeServeTitle: 'Industries We Serve',
+        industriesWeServe: [
+            {
+                title: 'Baking & Confectionery',
+                description: 'Optimize heat transfer in ovens and cooling tunnels',
+                image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg'
+            },
+            {
+                title: 'Dairy Processing',
+                description: 'Improve pasteurization, homogenization, and spray drying efficiency.',
+                image: ''
+            },
+            {
+                title: 'Canned & Processed Foods',
+                description: 'Enhance thermal sterilization and pressure control',
+                image: ''
+            },
+            {
+                title: 'Frozen Foods',
+                description: 'Prevent ice buildup and ensure uniform freezing.',
+                image: ''
+            },
+            {
+                title: 'Beverage Processing',
+                description: 'Optimize mixing, bottling, and packaging processes',
+                image: ''
+            }
+        ]
+    },
+    // Marine
+    {
+        slug: 'marine',
+        title: 'Marine',
+        description: '',
+        hero: {
+            title: 'Innovative Engineering Solutions for the Marine Industry',
+            subtitle: 'At GVPL Technologies, we offer advanced engineering services designed to optimize performance, safety, and efficiency in the marine sector. Utilizing cutting-edge tools such as Computational Fluid Dynamics (CFD) and Finite Element Analysis (FEA), we specialize in fluid dynamics, structural integrity testing, and hydrodynamic optimization to meet the unique challenges of maritime operations',
+            image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+        },
+        expertise: {
+            title: 'Our Marine Engineering Services',
+            features: [
+                {
+                    title: 'Fluid Flow Dynamics and Hydrodynamic Optimization',
+                    description: 'Maximize efficiency with precise simulations and analyses',
+                    image: MARFFD,
+                    bullets: [
+                        'Propulsion System Optimization: Enhance fluid flow around propellers, reduce drag, and improve propulsion efficiency.',
+                        'Hull Form Optimization: Minimize drag and fuel consumption while maximizing vessel efficiency.',
+                        'Seakeeping Analysis: Simulate vessel motion in waves for improved stability under various sea conditions.',
+                        'Ship Maneuverability Studies: Analyze rudder angles, propeller thrust, and hydrodynamic forces to enhance control and navigation.',
+                        'Hydroacoustic and Noise Prediction: Identify and mitigate noise sources caused by cavitation and pressure fluctuations.'
+                    ]
+                },
+                {
+                    title: 'HVAC Systems for Marine Vessels',
+                    description: 'Ensure safety and comfort onboard with optimized climate control solutions:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Engine Room Ventilation: Enhance airflow patterns and heat dissipation to maintain safe operating conditions.',
+                        'Human Comfort Analysis: Distribute airflow and temperature evenly for thermal comfort and precise zone control within confined spaces.'
+                    ]
+                },
+                {
+                    title: 'Structural Integrity Testing',
+                    description: 'Guarantee reliability and durability under extreme conditions:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Fluid Handling Equipment: Evaluate stress, thermal loads, and vibrations in pumps, valves, piping, and heat exchangers.',
+                        'Propulsion Systems: Assess deformation, cavitation, and stress in components like propellers, shafts, bearings, and thrusters.',
+                        'Ship Hull Structural Integrity: Analyze resistance to wave and impact forces for enhanced durability and strength.',
+                        'Dynamic Load Analysis: Evaluate fatigue caused by dynamic wind and wave forces.',
+                        'Rudder Structural Analysis: Ensure rudder strength under hydrodynamic forces and maneuvering loads.'
+                    ]
+                },
+                {
+                    title: 'Advanced Marine Applications',
+                    description: 'Address complex challenges with innovative engineering:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Cryogenic Storage Systems: Optimize thermal insulation for LNG and LPG tanks to minimize heat ingress and boil- off rates.',
+                        'Offshore Platforms: Simulate airflow to minimize wind loads and optimize design.',
+                        'Machinery Foundations: Ensure stability under operational loads through detailed force simulations.',
+                        'Collision Impact Analysis: Design resilient hulls to withstand collision forces and mitigate damage.'
+                    ]
+                }
+            ]
+        },
+        benefits: {
+            title: 'Why Choose GVPL Technologies?',
+            benefits: [
+                {
+                    icon: icon1,
+                    title: 'Advanced Analytical Techniques',
+                    desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
+                },
+                {
+                    icon: '',
+                    title: 'Experienced Team',
+                    desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
+                },
+                {
+                    icon: '',
+                    title: 'Confidentiality Assurance',
+                    desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
+                },
+                {
+                    icon: '',
+                    title: 'Customized Solutions',
+                    desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
+                }
+            ],
+            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+        },
+        industriesWeServeTitle: 'Applications of Our Marine Solutions',
+        industriesWeServe: [
+            {
+                title: 'Commercial Vessels',
+                description: 'Optimize propulsion and stability for improved operational efficiency.',
+                image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg'
+            },
+            {
+                title: 'Defence and Naval Ships',
+                description: 'Enhance durability, maneuverability, and noise reduction.',
+                image: ''
+            },
+            {
+                title: 'Offshore Platforms',
+                description: 'Improve safety and performance in extreme marine environments.',
+                image: ''
+            },
+            {
+                title: 'Luxury Yachts',
+                description: 'Ensure superior comfort and efficiency for high-end vessels.',
+                image: ''
+            }
+        ],
+        overView: {
+            title: 'Elevate Your Marine Engineering Projects with GVPL  technologies',
+            description: 'Partner with GVPL Technologies for innovative solutions that redefine performance,efficiency, and reliability in the marine industry.Contact us today to explore how we can help you optimize your maritime operations.'
+        }
+    },
+    // Pharma
+    {
+        slug: 'pharma',
+        title: 'Pharma',
+        description: '',
+        hero: {
+            title: 'Advanced Pharmaceutical Engineering Solutions by GVPL Technologies',
+            subtitle: 'At GVPL Technologies, we specialize in delivering cutting-edge engineering solutions for the pharmaceutical industry. Our expertise in Computational Fluid Dynamics (CFD), Finite Element Analysis (FEA), and structural testing ensures precision, compliance, and efficiency in critical pharmaceutical processes. From optimizing cleanroom environments to enhancing bioreactor performance, our solutions cater to the diverse needs of the pharmaceutical sector while adhering to global safety and quality standards.',
+            image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+        },
+        expertise: {
+            title: 'Our Pharmaceutical Engineering Services',
+            features: [
+                {
+                    title: 'Fluid Flow Dynamics',
+                    description: 'Enhance equipment efficiency and ensure process reliability with our advanced fluid dynamics simulations:',
+                    image: PHARFFD,
+                    bullets: [
+                        'Agitators and Blenders: Optimize mixing efficiency by eliminating dead zones and ensuring uniform particle distribution.',
+                        'Fluid Handling Systems: Minimize pressure drops and improve flow uniformity in pumps, pipelines, and filtration systems.',
+                        'Heat Transfer Equipment: Ensure uniform heating or cooling in sterilizers, reactors, and heat exchangers.',
+                        'Sterilization Systems: Optimize heat and steam distribution for effective sterilization with consistent temperature and pressure.',
+                        'Bioreactors: Simulate nutrient distribution, heat transfer, and pressure dynamics to prevent cell damage and ensure uniform growth.',
+                        'Coating Dynamics: Optimize airflow and particle interactions for efficient coating applications in tablets and other products.'
+                    ]
+                },
+                {
+                    title: 'Cleanroom and HVAC System Optimization',
+                    description: 'Ensure sterile environments with effective airflow and temperature control:',
+                    image: PHARCH,
+                    bullets: [
+                        'Cleanrooms: Prevent contamination through precise airflow simulations and optimized air distribution.',
+                        'HVAC Systems: Control temperature regulation, improve steam distribution, and enhance fluid dynamics in water purification processes.'
+                    ]
+                },
+                {
+                    title: 'Cryogenic Cooling and Medical Applications',
+                    description: 'Innovate with precise cooling solutions and medical simulations',
+                    image: PHARCCM,
+                    bullets: [
+                        'Cryogenic Cooling Systems: Simulate temperature distribution and vaporization during production and storage.',
+                        'Cryosurgery and Cryopreservation: Ensure accurate tissue freezing and preservation with optimized cooling rates and thermal gradients.',
+                        'Aerosol Drug Delivery: Model airflow in the respiratory tract to enhance drug delivery effectiveness.',
+                        'Cardiovascular Simulations: Analyze blood flow dynamics, shear stress, and turbulence for medical device design and diagnostics.'
+                    ]
+                },
+                {
+                    title: 'Structural Integrity Testing',
+                    description: 'Guarantee durability and safety of critical pharmaceutical equipment:',
+                    image: PHARST,
+                    bullets: [
+                        'Fluid Handling Equipment: Evaluate stress, thermal loads, and pressure management for pumps, valves, and pipelines.',
+                        'Heat Transfer Systems: Analyze thermal stress and heat flow in heat exchangers and furnaces.',
+                        'Sterilization Chambers: Ensure autoclaves and sterilization equipment can withstand high pressure and temperature conditions.',
+                        'Storage Tanks: Assess structural integrity under pressure, temperature fluctuations, and exposure to corrosive substances.'
+                    ]
+                }
+            ]
+        },
+        benefits: {
+            title: 'Why Choose GVPL Technologies?',
+            benefits: [
+                {
+                    icon: icon1,
+                    title: 'Advanced Analytical Techniques',
+                    desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
+                },
+                {
+                    icon: '',
+                    title: 'Experienced Team',
+                    desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
+                },
+                {
+                    icon: '',
+                    title: 'Confidentiality Assurance',
+                    desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
+                },
+                {
+                    icon: '',
+                    title: 'Customized Solutions',
+                    desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
+                }
+            ],
+            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+        },
+        industriesWeServeTitle: 'Applications of Our Solutions',
+        industriesWeServe: [
+            {
+                title: 'Biopharmaceutical Manufacturing',
+                description: 'Enhance bioreactor efficiency and ensure sterile operations.',
+                image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg'
+            },
+            {
+                title: 'Medical Device Design',
+                description: 'Test and optimize stents, heart valves, and dialysis machines.',
+                image: ''
+            },
+            {
+                title: 'Cleanroom Operations',
+                description: 'Maintain contamination-free environments for drug production.',
+                image: ''
+            },
+            {
+                title: 'Cryogenic Storage',
+                description: 'Optimize cold storage for pharmaceuticals and biologics.',
+                image: ''
+            },
+            {
+                title: 'Aerosol Delivery Systems',
+                description: 'Improve inhaler performance and drug delivery efficiency.',
+                image: ''
+            }
+        ],
+        overView: {
+            title: 'Revolutionize Pharmaceutical Engineering with GVPL Technologies',
+            description: 'Partner with GVPL Technologies to elevate your pharmaceutical processes with precision, efficiency, and compliance. Contact us today to discover how our solutions can transform your operations.'
+        }
+    },
+    // Process
+    {
+        slug: 'process',
+        title: 'Process',
+        description: '',
+        hero: {
+            title: 'Comprehensive Engineering Solutions for Process Equipment',
+            subtitle: 'At GVPL Technologies, we specialize in delivering innovative engineering solutions for process equipment across industries. Using advanced Computational Fluid Dynamics (CFD) and Finite Element Analysis (FEA), we optimize performance, ensure structural integrity, and enhance operational efficiency. Our expertise spans heat exchangers, cryogenic equipment, pressure vessels, boilers, storage tanks, and more, ensuring compliance with global standards like ASME, TEMA, and GOST.',
+            image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+        },
+        expertise: {
+            title: 'Our Expertise in Process Equipment Engineering',
+            features: [
+                {
+                    title: 'CFD Simulations for Process Equipment',
+                    description: 'Enhance performance and reliability through precise CFD simulations:',
+                    image: PROFFD,
+                    bullets: [
+                        'Cryogenic Equipment: Evaluate fluid behavior in liquid oxygen coolers, cryogenic valves, and LNG storage tanks.',
+                        'Predict phase changes, calculate pressure losses, and optimize thermal profiles.',
+                        'Heat Exchangers: Optimize performance for shell - and - tube, plate, and spiral heat exchangers.',
+                        'Calculate heat transfer rates, fluid- induced vibrations, and outlet temperatures.',
+                        'Pressure Vessels: Assess efficiency and safety for dryers, storage tanks, and buffer tanks.',
+                        'Simulate thermal profiles, separation efficiency, and pressure losses.',
+                        'Boilers and Reactors: Improve combustion, heat distribution, and particle separation in water tube boilers, economizers, and ducting systems.'
+                    ]
+                },
+                {
+                    title: 'FEA Simulations for Structural Integrity',
+                    description: 'Ensure durability and safety under critical loading conditions:',
+                    image: PROFEA,
+                    bullets: [
+                        'Cryogenic Equipment: Assess performance under extreme thermal gradients, seismic loads, and cyclic conditions.',
+                        'Pressure Vessels: Evaluate pressure, thermal loads, and fatigue life for robust operation in diverse environments.',
+                        'Heat Exchangers: Confirm structural integrity of tubes, shells, and supports under operational and environmental loads.',
+                        'Storage Tanks: Simulate wind and seismic loads, nozzle stresses, and thermal variations for floating roof tanks, bunded tanks, and silos.',
+                        'Boilers and Ducting: Analyze dynamic and static loads, vibrations, and fatigue for boiler structures and ducting systems.',
+                        'Support Structures and Skids: Test strength and stability of large structures, including skids, chassis, and support frames.'
+                    ]
+                }
+            ]
+        },
+        benefits: {
+            title: 'Why Choose GVPL Technologies?',
+            benefits: [
+                {
+                    icon: icon1,
+                    title: 'Advanced Analytical Techniques',
+                    desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
+                },
+                {
+                    icon: '',
+                    title: 'Experienced Team',
+                    desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
+                },
+                {
+                    icon: '',
+                    title: 'Confidentiality Assurance',
+                    desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
+                },
+                {
+                    icon: '',
+                    title: 'Customized Solutions',
+                    desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
+                }
+            ],
+            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+        },
+        industriesWeServeTitle: 'Applications of Our Solutions',
+        industriesWeServe: [
+            {
+                title: 'Industrial Manufacturing',
+                description: 'Optimize heat transfer and fluid dynamics for enhanced efficiency.',
+                image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg'
+            },
+            {
+                title: 'Chemical Processing',
+                description: 'Improve separation efficiency and mixing for better product quality.',
+                image: ''
+            },
+            {
+                title: 'Cryogenic Systems',
+                description: 'Ensure performance and safety in LNG storage and transportation.',
+                image: ''
+            },
+            {
+                title: 'Power Plants',
+                description: 'Maximize combustion and heat recovery in boilers and turbines.',
+                image: ''
+            },
+            {
+                title: 'Oil & Gas',
+                description: 'Enhance reliability of pressure vessels and separators under critical conditions.',
+                image: ''
+            }
+        ],
+        overView: {
+            title: 'Revolutionize Pharmaceutical Engineering with GVPL Technologies',
+            description: 'Partner with GVPL Technologies to elevate your pharmaceutical processes with precision, efficiency, and compliance. Contact us today to discover how our solutions can transform your operations.'
+        }
+    },
+    // real-estate
+    {
+        slug: 'real-estate',
+        title: 'Real Estate',
+        description: '',
+        hero: {
+            title: 'Advanced Engineering Solutions for Real Estate and Infrastructure',
+            subtitle: 'At GVPL Technologies, we deliver innovative engineering solutions tailored to the needs of the real estate and infrastructure sectors. Utilizing advanced tools like Computational Fluid Dynamics (CFD) and structural analysis, we optimize HVAC systems, enhance structural stability, and ensure environmental safety. Whether designing high-rise buildings or large residential complexes, our expertise ensures efficient, sustainable, and compliant solutions.',
+            image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+        },
+        expertise: {
+            title: 'Our Real Estate Engineering Services',
+            features: [
+                {
+                    title: 'HVAC and Airflow Optimization',
+                    description: 'Achieve efficient and comfortable spaces with precise airflow and HVAC designs:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Clean Air Filtration: Ensure proper airflow distribution and contaminant control in residential and commercial spaces.',
+                        'Pipe Network Analysis: Simulate water flow dynamics to ensure optimal delivery and drainage.',
+                        'CFD for Chimneys and Data Centers: Improve thermal performance and cooling strategies.',
+                        'Noise Reduction: Perform sound propagation analysis to minimize HVAC noise.'
+                    ]
+                },
+                {
+                    title: 'Structural Integrity and Seismic Analysis',
+                    description: 'Ensure building stability and safety with advanced structural simulations:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Wind Load Analysis: Predict the impact of wind forces on high - rise structures for safe designs.',
+                        'Natural Ventilation: Simulate airflow to position windows, vents, and atriums for maximum ventilation.',
+                        'Pollutant Dispersion Analysis: Ensure healthy indoor and outdoor air quality in urban developments.'
+                    ]
+                },
+                {
+                    title: 'Environmental and Natural Ventilation Analysis',
+                    description: 'Leverage environmental factors to create energy-efficient and sustainable designs:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Wind Load Analysis: Predict the impact of wind forces on high - rise structures for safe designs.',
+                        'Natural Ventilation: Simulate airflow to position windows, vents, and atriums for maximum ventilation.',
+                        'Pollutant Dispersion Analysis: Ensure healthy indoor and outdoor air quality in urban developments.'
+                    ]
+                },
+                {
+                    title: 'Smoke and Fire Safety Systems',
+                    description: 'Enhance safety with precise fire and evacuation strategies:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Smoke Extraction Systems: Design efficient evacuation plans for underground garages and large complexes.',
+                        'Fire Drill Routes: Develop and simulate evacuation routes to ensure compliance and safety.'
+                    ]
+                },
+                {
+                    title: 'CFD and Water Management Systems',
+                    description: 'Optimize water systems for efficient resource management:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Drainage System Analysis: Prevent flooding by simulating water flow dynamics across building complexes.',
+                        'Water Flow in High - Rises: Ensure smooth water distribution from ground to top levels.'
+                    ]
+                },
+                {
+                    title: 'Architectural Visualization and Animation',
+                    description: 'Bring designs to life with immersive visualization tools:',
+                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    bullets: [
+                        'Walkthrough Animations: Showcase architectural designs with realistic animations and images.',
+                        'Emergency Evacuation Simulations: Visualize and simulate fire drills and emergency routes for enhanced planning.'
+                    ]
+                }
+            ]
+        },
+        benefits: {
+            title: 'Why Choose GVPL Technologies?',
+            benefits: [
+                {
+                    icon: icon1,
+                    title: 'Advanced Analytical Techniques',
+                    desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
+                },
+                {
+                    icon: '',
+                    title: 'Experienced Team',
+                    desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
+                },
+                {
+                    icon: '',
+                    title: 'Confidentiality Assurance',
+                    desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
+                },
+                {
+                    icon: '',
+                    title: 'Customized Solutions',
+                    desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
+                }
+            ],
+            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+        },
+        industriesWeServeTitle: 'Applications of Our Solutions',
+        industriesWeServe: [
+            {
+                title: 'Commercial Complexes',
+                description: 'Optimize HVAC and water management for large office spaces and malls.',
+                image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg'
+            },
+            {
+                title: 'Residential Developments',
+                description: 'Ensure uniform temperature and ventilation in large housing projects.',
+                image: ''
+            },
+            {
+                title: 'High-Rise Buildings',
+                description: 'Analyze wind loads, structural stability, and natural ventilation for skyscrapers.',
+                image: ''
+            },
+            {
+                title: 'Industrial Facilities',
+                description: 'Enhance piping networks, noise reduction, and structural performance for industrial buildings.',
+                image: ''
+            }
+        ],
+        overView: {
+            title: 'Transform Real Estate and Infrastructure Projects with GVPL Technologies',
+            description: 'Partner with GVPL Technologies for innovative solutions that redefine safety, efficiency, and sustainability in real estate and infrastructure. Contact us today to learn how we can help you bring your vision to life.'
+        }
     }
 ];
