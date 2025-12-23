@@ -12,6 +12,7 @@ import NPD from './pages/Services/NPD';
 import PMC from './pages/Services/PMC';
 import RE from './pages/Services/RE';
 import ServiceCFD from './pages/Services/CFD';
+import ProductAnimation from './pages/Services/ProductAnimation';
 import AboutUs from './pages/AboutUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Careers from './pages/Careers';
@@ -40,47 +41,47 @@ function AppContent() {
               <Home />
             </PageTransition>
           } />
-            <Route path="/admin/login" element={
-              <PageTransition>
-                <Login />
-              </PageTransition>
-            } />
-              <Route path="/admin" element={
-                <RequireAdmin>
-                  <AdminLayout>
-                    <PageTransition>
-                      <AdminDashboard />
-                    </PageTransition>
-                  </AdminLayout>
-                </RequireAdmin>
-              } />
-              <Route path="/admin/content" element={
-                <RequireAdmin>
-                  <AdminLayout>
-                    <PageTransition>
-                      <ContentManager />
-                    </PageTransition>
-                  </AdminLayout>
-                </RequireAdmin>
-              } />
-              <Route path="/admin/blogs" element={
-                <RequireAdmin>
-                  <AdminLayout>
-                    <PageTransition>
-                      <BlogManager />
-                    </PageTransition>
-                  </AdminLayout>
-                </RequireAdmin>
-              } />
-              <Route path="/admin/careers" element={
-                <RequireAdmin>
-                  <AdminLayout>
-                    <PageTransition>
-                      <CareerManager />
-                    </PageTransition>
-                  </AdminLayout>
-                </RequireAdmin>
-              } />
+          <Route path="/admin/login" element={
+            <PageTransition>
+              <Login />
+            </PageTransition>
+          } />
+          <Route path="/admin" element={
+            <RequireAdmin>
+              <AdminLayout>
+                <PageTransition>
+                  <AdminDashboard />
+                </PageTransition>
+              </AdminLayout>
+            </RequireAdmin>
+          } />
+          <Route path="/admin/content" element={
+            <RequireAdmin>
+              <AdminLayout>
+                <PageTransition>
+                  <ContentManager />
+                </PageTransition>
+              </AdminLayout>
+            </RequireAdmin>
+          } />
+          <Route path="/admin/blogs" element={
+            <RequireAdmin>
+              <AdminLayout>
+                <PageTransition>
+                  <BlogManager />
+                </PageTransition>
+              </AdminLayout>
+            </RequireAdmin>
+          } />
+          <Route path="/admin/careers" element={
+            <RequireAdmin>
+              <AdminLayout>
+                <PageTransition>
+                  <CareerManager />
+                </PageTransition>
+              </AdminLayout>
+            </RequireAdmin>
+          } />
           <Route path="/industries/:slug" element={
             <PageTransition>
               <IndustryDynamic />
@@ -124,6 +125,11 @@ function AppContent() {
           <Route path="/services/cfd" element={
             <PageTransition>
               <ServiceCFD />
+            </PageTransition>
+          } />
+          <Route path="/services/product-animation" element={
+            <PageTransition>
+              <ProductAnimation />
             </PageTransition>
           } />
           <Route path="/about" element={
