@@ -38,8 +38,8 @@ const IndustryExpertise: React.FC<IndustryExpertiseProps> = ({ title, features }
     }, [features]);
 
     return (
-        <section className="max-w-7xl mx-auto px-4 mb-16">
-            <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-[#05DF72] to-[#00BCFF] bg-clip-text text-transparent">{title}</h2>
+        <section className="max-w-7xl mx-auto px-4 mb-16 py-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#05DF72] to-[#00BCFF] bg-clip-text text-transparent leading-tight py-4">{title}</h2>
             <div className="flex flex-col gap-10">
                 {features.map((feature, index) => {
                     const images = feature.images || (feature.image ? [feature.image] : []);

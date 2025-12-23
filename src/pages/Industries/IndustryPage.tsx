@@ -14,7 +14,7 @@ const IndustryPage = ({
 }: any) => (
     <div className="bg-white">
         <IndustryHero {...hero} />
-        <div className="relative z-20 mt-[50vh]">
+        <div className="relative z-20">
             <IndustryExpertise {...expertise} />
             <Benefits {...benefits} />
             {industriesWeServe && industriesWeServe.length > 0 && (
