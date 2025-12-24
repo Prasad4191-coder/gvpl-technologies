@@ -1,4 +1,8 @@
 import icon1 from '@/assets/icon/icon1.png';
+import icon2 from '@/assets/icon/icon2.png';
+import icon3 from '@/assets/icon/icon3.png';
+import icon4 from '@/assets/icon/icon4.png';
+import icon5 from '@/assets/icon/icon5.png';
 // Aerospace Engineering images
 import AECFD1 from '@/assets/gvpl website images/Industries/I - Aerospace Engineering/Aerospace Images GTG/CFD/Aerospace CFD  (1).png';
 import AECFD2 from '@/assets/gvpl website images/Industries/I - Aerospace Engineering/Aerospace Images GTG/CFD/Aerospace CFD  (2).png';
@@ -16,9 +20,17 @@ import AEFEA6 from '@/assets/gvpl website images/Industries/I - Aerospace Engine
 
 // Chemical images (No GTG folder found, keeping existing imports if valid, or commenting out if they were to be replaced. User said "remove old images". I will keep basic ones if they exist, but for now I will assume I only add the new ones and let the old ones be unused or removed if they were in the range 2-57)
 // Re-importing Chemical as fallback or if they were in the list.
-import CHECFD from '@/assets/gvpl website images/Industries/I-Chemical/53.0.3_Heat-Transfer-Simulation-1.png';
-import CHEFEA from '@/assets/gvpl website images/Industries/I-Chemical/Picture5.png';
-import CHEPAV from '@/assets/gvpl website images/Industries/I-Chemical/Picture6.jpg';
+import CHECFD1 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/CFD/Chemical CFD (1).png';
+import CHECFD3 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/CFD/Chemical CFD (3).png';
+import CHECFD4 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/CFD/Chemical CFD (4).png';
+import CHECFD5 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/CFD/Chemical CFD (5).png';
+import CHECFD6 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/CFD/Chemical CFD (6).png';
+import CHEFEA1 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/FEA/Chemical FEA (1).png';
+import CHEFEA2 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/FEA/Chemical FEA (2).png';
+import CHEFEA3 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/FEA/Chemical FEA (3).png';
+import CHEFEA4 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/FEA/Chemical FEA (4).png';
+import CHEFEA5 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/FEA/Chemical FEA (5).png';
+import CHEFEA6 from '@/assets/gvpl website images/Industries/I-Chemical/Chemical Images GTG/Chemical Images GTG/FEA/Chemical FEA (6).png';
 
 // Automotive images
 import AUTCFD1 from '@/assets/gvpl website images/Industries/I - Automotive/Automobile Images GTG/CFD/Automobile CFD (1).png';
@@ -27,7 +39,7 @@ import AUTCFD3 from '@/assets/gvpl website images/Industries/I - Automotive/Auto
 import AUTCFD4 from '@/assets/gvpl website images/Industries/I - Automotive/Automobile Images GTG/CFD/Automobile CFD (4).png';
 import AUTCFD5 from '@/assets/gvpl website images/Industries/I - Automotive/Automobile Images GTG/CFD/Automobile CFD (5).png';
 import AUTCFD6 from '@/assets/gvpl website images/Industries/I - Automotive/Automobile Images GTG/CFD/Automobile CFD (6).png';
-
+import AUTCFD7 from '@/assets/gvpl website images/Industries/I - Automotive/Picture15.png';
 // Defence images
 import DEFCFD1 from '@/assets/gvpl website images/Industries/I - Defence/Defence Images GTG/CFD/Defense CFD (1).png';
 import DEFCFD2 from '@/assets/gvpl website images/Industries/I - Defence/Defence Images GTG/CFD/Defense CFD (2).png';
@@ -201,8 +213,8 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'Leverage our advanced CFD simulations to optimize your aerospace projects:',
-                    image: '',
-                    images: [AECFD1, AECFD2, AECFD3, AECFD4, AECFD5, AECFD6],
+                    image: AECFD1,
+                    //images: [AECFD1, AECFD2, AECFD3, AECFD4, AECFD5, AECFD6],
                     bullets: [
                         'Aircraft Heat Management: Improve thermal performance for cabin air quality and electronic cooling systems.',
                         'Propulsion System Optimisation: Analyse pressure, velocity, and turbulence to enhance efficiency.',
@@ -214,8 +226,8 @@ export const industries = [
                 {
                     title: 'Finite Element Analysis (FEA)',
                     description: '',
-                    image: '',
-                    images: [AEFEA1, AEFEA2, AEFEA3, AEFEA4, AEFEA5, AEFEA6],
+                    image: AECFD2,
+                    //images: [AEFEA1, AEFEA2, AEFEA3, AEFEA4, AEFEA5, AEFEA6],
                     bullets: [
                         'Thermal Analysis: Visualize and predict heat transfer between fluids and equipment surfaces.',
                         'Structural Analysis: Determine stresses and strain distributions under different loading scenarios.',
@@ -225,7 +237,7 @@ export const industries = [
                 {
                     title: 'Product Animation and Visualization',
                     description: '',
-                    image: AECFD1, // Fallback or reusing available image as I don't have a specific PAV folder, using CFD image for now or AEPAV if I kept it? I removed AEPAV import. I'll use AECFD1.
+                    image: AECFD3, // Fallback or reusing available image as I don't have a specific PAV folder, using CFD image for now or AEPAV if I kept it? I removed AEPAV import. I'll use AECFD1.
                     bullets: [
                         'Process Animation: Visually demonstrate chemical processes and equipment functionality to stakeholders.',
                         'Training and Safety Videos: Provide engaging and detailed visual content for staff training and safety protocols.'
@@ -234,7 +246,7 @@ export const industries = [
                 {
                     title: 'Design, Development, and Reverse Engineering',
                     description: '',
-                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    image: AECFD4,
                     bullets: [
                         '3D CAD Modeling: Develop precise, manufacturable models that meet industry standards.',
                         'Reverse Engineering: Analyze and optimize existing designs to improve performance.',
@@ -252,22 +264,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in chemical industry and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all project data.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We provide tailored solutions for your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: AECFD6,
         },
         industriesWeServeTitle: 'Industries We Serve in Aerospace',
         industriesWeServe: [
@@ -329,7 +341,7 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'We use CFD simulations to solve complex flow and thermal challenges in chemical processes:',
-                    image: CHECFD,
+                    image: CHECFD1,
                     bullets: [
                         'Flow Dynamics Analysis: Identify inefficiencies such as turbulence, dead zones, and pressure losses. Improve velocity distribution and flow paths for optimal performance.',
                         'Multiphase Flow Analysis: Analyze interactions in systems with liquid-gas, liquid-solid, or multiple liquid phases to ensure efficient heat and mass transfer.',
@@ -341,7 +353,7 @@ export const industries = [
                 {
                     title: 'Finite Element Analysis (FEA)',
                     description: 'Our FEA solutions ensure the structural integrity and durability of your chemical equipment:',
-                    image: CHEFEA,
+                    image: CHEFEA1,
                     bullets: [
                         'Thermal Analysis: Visualize and predict heat transfer between fluids and equipment surfaces. Identify thermal stresses in critical zones like pressure vessels and heat exchanger walls.',
                         'Structural Analysis: Determine stress and strain distributions under static and dynamic pressures, helping to prevent material failure at high-stress points such as weld seams and shell connections.',
@@ -352,7 +364,7 @@ export const industries = [
                 {
                     title: 'Product Animation and Visualization',
                     description: 'Our 3D animation services simplify complex chemical concepts for better understanding:',
-                    image: CHEPAV,
+                    image: CHECFD5,
                     bullets: [
                         'Process Demonstrations: Showcase chemical processes and equipment functionality to stakeholders.',
                         'Training and Safety Videos: Provide engaging and detailed visual content for staff training and safety compliance.',
@@ -363,7 +375,7 @@ export const industries = [
                 {
                     title: 'Design, Development, and Reverse Engineering',
                     description: 'From concept to reality, we bring your ideas to life with our design expertise:',
-                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    image: CHECFD6,
                     bullets: [
                         '3D CAD Modeling: Develop precise, manufacturable models that meet industry standards.',
                         'Reverse Engineering: Analyze and optimize existing designs to improve performance and extend equipment life.',
@@ -382,22 +394,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in chemical industry and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all project data.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We provide tailored solutions for your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: CHECFD4,
         },
         industriesWeServeTitle: 'Industries We Serve in Chemical',
         industriesWeServe: [
@@ -434,8 +446,8 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'Optimize your vehicle`s fluid dynamics with our advanced CFD simulations:',
-                    image: '',
-                    images: [AUTCFD1, AUTCFD2, AUTCFD3, AUTCFD4, AUTCFD5, AUTCFD6],
+                    image: AUTCFD1,
+                    //images: [AUTCFD1, AUTCFD2, AUTCFD3, AUTCFD4, AUTCFD5, AUTCFD6],
                     bullets: [
                         'Cabin HVAC Systems: Enhance passenger comfort through optimized airflow and temperature control.',
                         'Exhaust Systems: Improve noise reduction, emission compliance, and engine performance.',
@@ -447,7 +459,7 @@ export const industries = [
                 {
                     title: 'Finite Element Analysis (FEA)',
                     description: 'Ensure structural integrity and safety with our FEA expertise:',
-                    image: AUTCFD1, // Using CFD image as placeholder if FEA not found, or use previously imported if available. I see I didn't import NEW FEA images for Auto because I didn't find them. I'll use CFD or keep original? Original imports are gone. I'll use CFD.
+                    image: AUTCFD2, // Using CFD image as placeholder if FEA not found, or use previously imported if available. I see I didn't import NEW FEA images for Auto because I didn't find them. I'll use CFD or keep original? Original imports are gone. I'll use CFD.
                     bullets: [
                         'Chassis & Frames: Analyze stress to enhance durability and reliability.',
                         'Vibration Analysis: Identify and mitigate vibrations to improve component life.',
@@ -459,7 +471,7 @@ export const industries = [
                 {
                     title: 'Design of Experiments (DOE)',
                     description: 'Systematically optimize automotive components with DOE:',
-                    image: AUTCFD2,
+                    image: AUTCFD3,
                     bullets: [
                         'Performance Improvement: Identify optimal design variables.',
                         'Reliability Enhancement: Increase product consistency and lifespan.',
@@ -469,7 +481,7 @@ export const industries = [
                 {
                     title: 'Reverse Engineering',
                     description: 'Revolutionize product designs through reverse engineering:',
-                    image: AUTCFD3,
+                    image: AUTCFD4,
                     bullets: [
                         '3D Scanning: Capture precise dimensions for design optimization.',
                         'Material Insights: Evaluate and enhance material properties for better performance.',
@@ -479,7 +491,7 @@ export const industries = [
                 {
                     title: 'Product Animation',
                     description: 'Bring automotive concepts to life with realistic 3D animations:',
-                    image: AUTCFD4,
+                    image: AUTCFD5,
                     bullets: [
                         'Product Demonstrations: Highlight features to investors and customers.',
                         'Training Videos: Enhance understanding of complex systems.',
@@ -489,7 +501,7 @@ export const industries = [
                 {
                     title: 'CAD & Drafting',
                     description: 'Achieve precision in design with our CAD and drafting services:',
-                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    image: AUTCFD6,
                     bullets: [
                         '3D Models: Transform concepts into detailed, manufacturable designs.',
                         '2D Drafting: Generate accurate technical drawings with dimensions and BOM.',
@@ -499,7 +511,7 @@ export const industries = [
                 {
                     title: 'Acoustic Simulations',
                     description: 'Enhance passenger comfort with advanced noise control:',
-                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    image: AUTCFD7,
                     bullets: [
                         'Cabin Noise Reduction: Design for quieter interiors.',
                         'Vibration Control: Optimize designs to minimize noise and improve smoothness.',
@@ -517,17 +529,17 @@ export const industries = [
                     desc: 'We all are passionate to transform your ideas into reality. Collaborate with friends, family, and coworkers from any device.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Realtime Inspection',
                     desc: 'We all are passionate to transform your ideas into reality. Collaborate with friends, family, and coworkers from any device.'
                 },
                 {
-                    icon: '',
+                    icon: icon4,
                     title: 'Earn more Exposure',
                     desc: 'We all are passionate to transform your ideas into reality. Collaborate with friends, family, and coworkers from any device.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: AUTCFD6,
         },
         industriesWeServeTitle: 'Industries We Serve in Automotive',
         industriesWeServe: [
@@ -579,8 +591,8 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'Optimize defense systems with detailed CFD simulations:',
-                    image: '',
-                    images: [DEFCFD1, DEFCFD2, DEFCFD3, DEFCFD4, DEFCFD5, DEFCFD6],
+                    image: DEFCFD1,
+                    //images: [DEFCFD1, DEFCFD2, DEFCFD3, DEFCFD4, DEFCFD5, DEFCFD6],
                     bullets: [
                         'Aerodynamic Analysis: Gain insights into velocity distribution, pressure profiles, and flow paths for enhanced system performance.',
                         'Hydrodynamic Performance: Evaluate wave resistance, drag, and cavitation effects to improve ship hull stability and propulsion efficiency.',
@@ -593,8 +605,8 @@ export const industries = [
                 {
                     title: 'Finite Element Analysis (FEA)',
                     description: 'Our FEA solutions ensure the structural integrity and durability of your chemical equipment:',
-                    image: '',
-                    images: [DEFFEA1, DEFFEA2, DEFFEA3, DEFFEA4, DEFFEA5, DEFFEA6],
+                    image: DEFFEA2,
+                    //images: [DEFFEA1, DEFFEA2, DEFFEA3, DEFFEA4, DEFFEA5, DEFFEA6],
                     bullets: [
                         'Armor Impact Analysis: Simulate kinetic energy absorption to enhance material performance under impact.',
                         'Structural Durability: Assess stress and strain distributions in vehicle frames, ship rudders, and gun barrels.',
@@ -605,8 +617,8 @@ export const industries = [
                 {
                     title: 'Reliability Analysis',
                     description: 'Maximize operational excellence with comprehensive reliability assessments:',
-                    image: '',
-                    images: [DEFRA1, DEFRA2, DEFRA3],
+                    image: DEFRA3,
+                    //images: [DEFRA1, DEFRA2, DEFRA3],
                     bullets: [
                         'Lifecycle Optimization: Ensure devices and components function reliably throughout their expected lifecycle.',
                         'Failure Analysis: Identify potential failure points using predictive modeling and root cause analysis.',
@@ -625,22 +637,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: DEFCFD4,
         },
         industriesWeServeTitle: 'Applications of Our Solutions ',
         industriesWeServe: [
@@ -687,8 +699,8 @@ export const industries = [
                 {
                     title: 'Thermal Management and CFD Analysis',
                     description: 'Optimize cooling and airflow with state-of-the-art CFD simulations:',
-                    image: '',
-                    images: [DIECFD1, DIECFD2, DIECFD3, DIECFD4],
+                    image: DIECFD1,
+                    //images: [DIECFD1, DIECFD2, DIECFD3, DIECFD4],
                     bullets: [
                         'Internal DG Room Optimization: Prevent overheating by simulating airflow and temperature distribution within DG rooms, enhancing equipment reliability.',
                         'External DG Room Ventilation: Analyze external airflow to prevent short - circuiting between suction and discharge openings, improving HVAC efficiency.',
@@ -709,8 +721,8 @@ export const industries = [
                 {
                     title: 'Structural Strength and FEA Analysis',
                     description: 'Ensure the structural integrity of DG systems under various loads with FEA simulations:',
-                    image: '',
-                    images: [DIEFEA1, DIEFEA2, DIEFEA3, DIEFEA4],
+                    image: DIEFEA2,
+                    //images: [DIEFEA1, DIEFEA2, DIEFEA3, DIEFEA4],
                     bullets: [
                         'Base Frame Durability: Assess stress distribution and deformation to enhance the structural reliability of DG base frames.',
                         'Vibration Resistance: Analyze the effects of external vibrations on DG structures to improve durability and operational stability.',
@@ -736,8 +748,8 @@ export const industries = [
                 {
                     title: 'Acoustic Analysis',
                     description: 'Minimize noise levels and ensure compliance with environmental standards using advanced acoustic simulations:',
-                    image: '',
-                    images: [DIEAA1, DIEAA2, DIEAA3, DIEAA4],
+                    image: DIECFD2,
+                    //images: [DIEAA1, DIEAA2, DIEAA3, DIEAA4],
                     bullets: [
                         'Noise Level Measurement: Quantify sound intensity at various distances from DG sets.',
                         'Noise Propagation Analysis: Understand how sound travels and identify hotspots for targeted noise reduction.',
@@ -765,22 +777,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: DIECFD3,
         },
         industriesWeServeTitle: 'Applications of Our DG Engineering Solutions',
         industriesWeServe: [
@@ -847,8 +859,8 @@ export const industries = [
                 {
                     title: 'Structural Integrity and FEA Analysis',
                     description: 'Ensure the durability and reliability of electronic components under various conditions:',
-                    image: '',
-                    images: [ELEFEA1, ELEFEA2, ELEFEA3, ELEFEA4, ELEFEA5, ELEFEA6],
+                    image: ELEFEA3,
+                    //images: [ELEFEA1, ELEFEA2, ELEFEA3, ELEFEA4, ELEFEA5, ELEFEA6],
                     bullets: [
                         'Mechanical Performance: Evaluate microprocessors and power modules under stress, vibration, and external forces.',
                         'PCB Reliability: Optimize PCB designs for electrical, thermal, and mechanical stress resistance.',
@@ -870,7 +882,7 @@ export const industries = [
                 {
                     title: 'Product Animation and Visualization',
                     description: 'Our 3D animation services simplify complex chemical concepts for better understanding:',
-                    image: ELECFD1, // Placeholder
+                    image: ELEFEA6, // Placeholder
                     bullets: [
                         'Process Demonstrations: Showcase chemical processes and equipment functionality to stakeholders.',
                         'Training and Safety Videos: Provide engaging and detailed visual content for staff training and safety compliance.',
@@ -881,7 +893,7 @@ export const industries = [
                 {
                     title: 'Design, Development, and Reverse Engineering',
                     description: 'From concept to reality, we bring your ideas to life with our design expertise:',
-                    image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+                    image: ELECFD4,
                     bullets: [
                         '3D CAD Modeling: Develop precise, manufacturable models that meet industry standards.',
                         'Reverse Engineering: Analyze and optimize existing designs to improve performance and extend equipment life.',
@@ -900,22 +912,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: ELECFD6,
         },
         industriesWeServeTitle: 'Applications of Our Solutions ',
         industriesWeServe: [
@@ -962,8 +974,8 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'Flow Dynamics & Process Optimization',
-                    image: '',
-                    images: [FOODCFD1, FOODCFD2, FOODCFD3, FOODCFD4, FOODCFD5, FOODCFD6, FOODCFD7, FOODCFD8],
+                    image: FOODCFD1,
+                    //images: [FOODCFD1, FOODCFD2, FOODCFD3, FOODCFD4, FOODCFD5, FOODCFD6, FOODCFD7, FOODCFD8],
                     bullets: [
                         'Velocity & Pressure Analysis: Identify turbulence, pressure losses, and inefficiencies in processing systems.',
                         'Multiphase Flow Simulation: Optimize heat and mass transfer to improve ingredient mixing and ensure uniform temperature distribution.',
@@ -974,8 +986,8 @@ export const industries = [
                 {
                     title: 'Thermal Management & Heat Transfer',
                     description: '',
-                    image: '',
-                    images: [FOODCFD1], // Reusing CFD/HT images as I don't have separate thermal folder, using subset or generic
+                    image: FOODCFD2,
+                    //images: [FOODCFD1], // Reusing CFD/HT images as I don't have separate thermal folder, using subset or generic
                     bullets: [
                         'Temperature Distribution Analysis: Identify hotspots, cold spots, and uneven heat transfer in food processing systems.',
                         'Forced Air Circulation: Optimize heat transfer rates to minimize energy consumption in ovens, freezers, and dryers.',
@@ -985,8 +997,8 @@ export const industries = [
                 {
                     title: 'Clean room & Contamination Control',
                     description: '',
-                    image: '',
-                    images: [FOODCFD2], // Reusing generic
+                    image: FOODCFD3,
+                    //images: [FOODCFD2], // Reusing generic
                     bullets: [
                         'Airflow Simulation: Optimize air speed and distribution to maintain hygiene and prevent contamination in cleanrooms.',
                         'Contaminant Behavior Prediction: Track and control potential hazards in processing environments.'
@@ -995,8 +1007,8 @@ export const industries = [
                 {
                     title: 'Finite Element Analysis (FEA) for Structural Integrity',
                     description: 'Structural Durability & Fatigue Analysis',
-                    image: '',
-                    images: [FOODFEA1, FOODFEA2, FOODFEA3, FOODFEA4, FOODFEA5, FOODFEA6],
+                    image: FOODFEA1,
+                    //images: [FOODFEA1, FOODFEA2, FOODFEA3, FOODFEA4, FOODFEA5, FOODFEA6],
                     bullets: [
                         'FEA for Pumps & Valves: Evaluate deformation and stress under various operational conditions to ensure longevity.',
                         'Heat Exchanger & Pressure Vessel Analysis: Prevent thermal degradation by identifying weak points in food processing equipment.',
@@ -1006,8 +1018,8 @@ export const industries = [
                 {
                     title: 'Additional Engineering Solutions',
                     description: '',
-                    image: '',
-                    images: [FOODADD1, FOODADD2, FOODADD3, FOODADD4],
+                    image: FOODADD3,
+                    //images: [FOODADD1, FOODADD2, FOODADD3, FOODADD4],
                     bullets: [
                         'Acoustic Analysis: Minimize noise levels in processing plants to enhance worker safety.',
                         'Cavitation Analysis: Prevent bubble formation and erosion in high - speed fluid systems.',
@@ -1027,22 +1039,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: FOODCFD5,
         },
         industriesWeServeTitle: 'Industries We Serve',
         industriesWeServe: [
@@ -1089,8 +1101,8 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'Flow Dynamics & Process Optimization',
-                    image: '',
-                    images: [HVACAA1, HVACAA2, HVACAA3, HVACAA4],
+                    image: HVACAA1,
+                    //images: [HVACAA1, HVACAA2, HVACAA3, HVACAA4],
                     bullets: [
                         'Velocity & Pressure Analysis: Identify turbulence, pressure losses, and inefficiencies in processing systems.',
                         'Multiphase Flow Simulation: Optimize heat and mass transfer to improve ingredient mixing and ensure uniform temperature distribution.',
@@ -1101,8 +1113,8 @@ export const industries = [
                 {
                     title: 'Thermal Management and Heat Transfer',
                     description: 'Enhance system efficiency with advanced thermal analysis:',
-                    image: '',
-                    images: [HVACHC1, HVACHC2, HVACHC3, HVACHC4],
+                    image: HVACIE2,
+                    //images: [HVACHC1, HVACHC2, HVACHC3, HVACHC4],
                     bullets: [
                         'Temperature Distribution Analysis: Identify hotspots, cold spots, and uneven heat transfer in food processing systems.',
                         'Forced Air Circulation: Optimize heat transfer rates to minimize energy consumption in ovens, freezers, and dryers.',
@@ -1112,8 +1124,8 @@ export const industries = [
                 {
                     title: 'Cleanroom and Contamination Control',
                     description: 'Ensure sterile environments with our specialized HVAC solutions:',
-                    image: '',
-                    images: [HVACIE1, HVACIE2, HVACIE3, HVACIE4],
+                    image: HVACHC1,
+                    //images: [HVACIE1, HVACIE2, HVACIE3, HVACIE4],
                     bullets: [
                         'Flow Visualization: Identify turbulence and stagnation zones to minimize contamination risks.',
                         'Pressure Cascades: Maintain positive/negative pressure differentials to prevent cross - contamination.',
@@ -1123,8 +1135,8 @@ export const industries = [
                 {
                     title: 'Structural Integrity and Vibration Analysis',
                     description: 'Ensure the durability and quiet operation of HVAC equipment:',
-                    image: '',
-                    images: [HVACSI1, HVACSI2, HVACSI3, HVACSI4],
+                    image: HVACSI4,
+                    // images: [HVACSI1, HVACSI2, HVACSI3, HVACSI4],
                     bullets: [
                         'Ductwork Analysis: Assess stress and deformation under pressure and thermal loads.',
                         'Vibration Isolation: Minimize noise and wear in fans, compressors, and chillers.',
@@ -1142,22 +1154,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: HVACAA3,
         },
         industriesWeServeTitle: 'Industries We Serve',
         industriesWeServe: [
@@ -1204,8 +1216,8 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'Enhance vessel performance with advanced fluid dynamics simulations:',
-                    image: '',
-                    images: [MARFFD1, MARFFD2, MARFFD3, MARFFD4, MARFFD5, MARFFD6],
+                    image: MARFFD1,
+                    //images: [MARFFD1, MARFFD2, MARFFD3, MARFFD4, MARFFD5, MARFFD6],
                     bullets: [
                         'Hull Optimization: Reduce drag and improve fuel efficiency through hull form analysis.',
                         'Propulsion Efficiency: Simulate propeller - hull interaction to maximize thrust and minimize cavitation.',
@@ -1216,8 +1228,8 @@ export const industries = [
                 {
                     title: 'HVAC and Environmental Control',
                     description: 'Ensure crew comfort and equipment safety with optimized HVAC systems:',
-                    image: '',
-                    images: [MARHVAC1, MARHVAC2],
+                    image: MARHVAC1,
+                    //images: [MARHVAC1, MARHVAC2],
                     bullets: [
                         'Cabin Ventilation: Design efficient airflow systems for passenger and crew comfort.',
                         'Engine Room Cooling: Manage heat loads to ensure reliable engine operation.',
@@ -1227,8 +1239,8 @@ export const industries = [
                 {
                     title: 'Structural Integrity and FEA',
                     description: 'Ensure the durability and safety of marine structures:',
-                    image: '',
-                    images: [MARSTR1, MARSTR2, MARSTR3, MARSTR4, MARSTR5],
+                    image: MARSTR3,
+                    //images: [MARSTR1, MARSTR2, MARSTR3, MARSTR4, MARSTR5],
                     bullets: [
                         'Global Strength Analysis: Evaluate hull stress distribution under wave and cargo loads.',
                         'Vibration Analysis: Mitigate machinery - induced vibrations to improve comfort and structural life.',
@@ -1247,22 +1259,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: MARSTR2,
         },
         industriesWeServeTitle: 'Applications of Our Marine Solutions',
         industriesWeServe: [
@@ -1308,8 +1320,8 @@ export const industries = [
                 {
                     title: 'Fluid Flow Dynamics (CFD)',
                     description: 'Optimize process efficiency and product quality with refined fluid dynamics:',
-                    image: '',
-                    images: [PHARFFD1, PHARFFD2, PHARFFD3, PHARFFD4],
+                    image: PHARFFD2,
+                    //images: [PHARFFD1, PHARFFD2, PHARFFD3, PHARFFD4],
                     bullets: [
                         'Mixing Tank Optimization: Ensure uniform mixing and prevent dead zones in bioreactors and fermenters.',
                         'Multiphase Flow Simulation: Model interactions between liquids, gases, and solids for accurate process control.',
@@ -1320,8 +1332,8 @@ export const industries = [
                 {
                     title: 'Cleanroom and HVAC Analysis',
                     description: 'Maintain strict contamination control with advanced airflow simulations:',
-                    image: '',
-                    images: [PHARCL1, PHARCL2],
+                    image: PHARCL1,
+                    //images: [PHARCL1, PHARCL2],
                     bullets: [
                         'Airflow Patterns: Visualize and optimize air distribution to maintain ISO class standards.',
                         'Contaminant Transport: Track particle movement to prevent cross - contamination.',
@@ -1332,8 +1344,8 @@ export const industries = [
                 {
                     title: 'Cryogenic and Cold Chain Management',
                     description: 'Ensure product integrity during storage and transport:',
-                    image: '',
-                    images: [PHARCRY1, PHARCRY2],
+                    image: PHARCRY2,
+                    //images: [PHARCRY1, PHARCRY2],
                     bullets: [
                         'Freezer Design: Optimize cooling rates and temperature uniformity in ultra - low temperature freezers.',
                         'Transport Simulation: Model temperature profiles in shipping containers ensuring compliance with GDP.',
@@ -1343,8 +1355,8 @@ export const industries = [
                 {
                     title: 'Structural Integrity and Safety',
                     description: 'Enhance equipment durability and compliance with safety standards:',
-                    image: '',
-                    images: [PHARSTR1, PHARSTR2, PHARSTR3, PHARSTR4],
+                    image: PHARSTR1,
+                    //  images: [PHARSTR1, PHARSTR2, PHARSTR3, PHARSTR4],
                     bullets: [
                         'Vessel Stress Analysis: Evaluate structural integrity of pressure vessels and tanks under operating loads.',
                         'Seismic Assessment: Ensure critical equipment withstands seismic events.',
@@ -1363,22 +1375,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: PHARFFD3,
         },
         industriesWeServeTitle: 'Applications of Our Solutions',
         industriesWeServe: [
@@ -1429,8 +1441,8 @@ export const industries = [
                 {
                     title: 'Computational Fluid Dynamics (CFD)',
                     description: 'Optimize flow and thermal performance in process equipment:',
-                    image: '',
-                    images: [PROCFD1, PROCFD2, PROCFD3, PROCFD4, PROCFD5, PROCFD6],
+                    image: PROCFD1,
+                    //images: [PROCFD1, PROCFD2, PROCFD3, PROCFD4, PROCFD5, PROCFD6],
                     bullets: [
                         'Mixing Efficiency: Enhance agitation and blending in reactors and tanks.',
                         'Flow Distribution: Ensure uniform flow in distributors and packed beds.',
@@ -1441,8 +1453,8 @@ export const industries = [
                 {
                     title: 'Finite Element Analysis (FEA)',
                     description: 'Ensure structural reliability under operational loads:',
-                    image: '',
-                    images: [PROFEA1, PROFEA2, PROFEA3, PROFEA4, PROFEA5, PROFEA6],
+                    image: PROFEA2,
+                    //images: [PROFEA1, PROFEA2, PROFEA3, PROFEA4, PROFEA5, PROFEA6],
                     bullets: [
                         'Pressure Vessel Design: Verify compliance with ASME and other codes under pressure and thermal loads.',
                         'Supports and Skids: Analyze structural stability of equipment supports and transport skids.',
@@ -1453,8 +1465,8 @@ export const industries = [
                 {
                     title: 'Design and Drafting',
                     description: 'Comprehensive design services for process equipment:',
-                    image: '',
-                    images: [PROCFD1], // Placeholder
+                    image: PROCFD5,
+                    //images: [PROCFD1], // Placeholder
                     bullets: [
                         'Detailed Engineering: Create fabrication drawings and P&IDs.',
                         '3D Modeling: Develop accurate 3D models for plant layout and clash detection.',
@@ -1472,22 +1484,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: PROCFD5,
         },
         industriesWeServeTitle: 'Applications of Our Solutions',
         industriesWeServe: [
@@ -1538,8 +1550,8 @@ export const industries = [
                 {
                     title: 'HVAC and Airflow Optimization',
                     description: 'Achieve efficient and comfortable spaces with precise airflow and HVAC designs:',
-                    image: '',
-                    images: [HVACAA1, HVACAA2, HVACAA3, HVACAA4], // Reusing HVAC images
+                    image: REHVAC1,
+                    //images: [HVACAA1, HVACAA2, HVACAA3, HVACAA4], // Reusing HVAC images
                     bullets: [
                         'Clean Air Filtration: Ensure proper airflow distribution and contaminant control in residential and commercial spaces.',
                         'Pipe Network Analysis: Simulate water flow dynamics to ensure optimal delivery and drainage.',
@@ -1550,8 +1562,8 @@ export const industries = [
                 {
                     title: 'Structural Integrity and Seismic Analysis',
                     description: 'Ensure building stability and safety with advanced structural simulations:',
-                    image: '',
-                    images: [PROFEA1, PROFEA2], // Reusing FEA images
+                    image: REHVAC5,
+                    //images: [PROFEA1, PROFEA2], // Reusing FEA images
                     bullets: [
                         'Wind Load Analysis: Predict the impact of wind forces on high - rise structures for safe designs.',
                         'Natural Ventilation: Simulate airflow to position windows, vents, and atriums for maximum ventilation.',
@@ -1561,8 +1573,8 @@ export const industries = [
                 {
                     title: 'Environmental and Natural Ventilation Analysis',
                     description: 'Leverage environmental factors to create energy-efficient and sustainable designs:',
-                    image: '',
-                    images: [HVACAA1, HVACAA2], // Reusing HVAC
+                    image: REHVAC6,
+                    //images: [HVACAA1, HVACAA2], // Reusing HVAC
                     bullets: [
                         'Wind Load Analysis: Predict the impact of wind forces on high - rise structures for safe designs.',
                         'Natural Ventilation: Simulate airflow to position windows, vents, and atriums for maximum ventilation.',
@@ -1572,8 +1584,8 @@ export const industries = [
                 {
                     title: 'Smoke and Fire Safety Systems',
                     description: 'Enhance safety with precise fire and evacuation strategies:',
-                    image: '',
-                    images: [HVACAA3, HVACAA4], // Reusing HVAC
+                    image: REHVAC2,
+                    //images: [HVACAA3, HVACAA4], // Reusing HVAC
                     bullets: [
                         'Smoke Extraction Systems: Design efficient evacuation plans for underground garages and large complexes.',
                         'Fire Drill Routes: Develop and simulate evacuation routes to ensure compliance and safety.'
@@ -1582,8 +1594,8 @@ export const industries = [
                 {
                     title: 'CFD and Water Management Systems',
                     description: 'Optimize water systems for efficient resource management:',
-                    image: '',
-                    images: [PROCFD1, PROCFD2], // Reusing Process CFD
+                    image: RESTR1,
+                    //images: [PROCFD1, PROCFD2], // Reusing Process CFD
                     bullets: [
                         'Drainage System Analysis: Prevent flooding by simulating water flow dynamics across building complexes.',
                         'Water Flow in High - Rises: Ensure smooth water distribution from ground to top levels.'
@@ -1592,8 +1604,8 @@ export const industries = [
                 {
                     title: 'Architectural Visualization and Animation',
                     description: 'Bring designs to life with immersive visualization tools:',
-                    image: '',
-                    images: [PROCFD2], // Reusing Electronics placeholder
+                    image: RESTR2,
+                    //images: [PROCFD2], // Reusing Electronics placeholder
                     bullets: [
                         'Walkthrough Animations: Showcase architectural designs with realistic animations and images.',
                         'Emergency Evacuation Simulations: Visualize and simulate fire drills and emergency routes for enhanced planning.'
@@ -1610,22 +1622,22 @@ export const industries = [
                     desc: 'We employ state-of-the-art instruments and methodologies to deliver precise and reliable results.'
                 },
                 {
-                    icon: '',
+                    icon: icon2,
                     title: 'Experienced Team',
                     desc: 'Our team comprises seasoned professionals with extensive backgrounds in pharmaceutical sciences and engineering.'
                 },
                 {
-                    icon: '',
+                    icon: icon3,
                     title: 'Confidentiality Assurance',
                     desc: 'We prioritize the confidentiality of your proprietary information, ensuring secure handling of all projects.'
                 },
                 {
-                    icon: '',
+                    icon: icon5,
                     title: 'Customized Solutions',
                     desc: 'We tailor our services to meet your specific needs, providing flexible and efficient project execution.'
                 }
             ],
-            image: 'https://www.shutterstock.com/image-photo/chemical-plant-260nw-123456789.jpg',
+            image: RESTR3,
         },
         industriesWeServeTitle: 'Applications of Our Solutions',
         industriesWeServe: [
