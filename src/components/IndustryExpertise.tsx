@@ -70,9 +70,9 @@ const IndustryExpertise: React.FC<IndustryExpertiseProps> = ({ title, features }
                         <div key={feature.title} className="bg-white p-6 flex flex-col md:flex-row gap-8 items-center rounded-lg shadow-sm">
                             {/* Render Image: Wrapped in Link if it's product animation, otherwise just the image div */}
                             {isProductAnimation ? (
-                                <Link to="/services/product-animation" className="flex-shrink-0">
+                                <a href="https://gvpltechnologies.com/animation/home" className="flex-shrink-0" target="_blank" rel="noopener noreferrer">
                                     {ImageContent}
-                                </Link>
+                                </a>
                             ) : (
                                 ImageContent
                             )}

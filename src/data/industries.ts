@@ -822,8 +822,8 @@ export const industries = [
                 {
                     title: 'Thermal Management and CFD Analysis',
                     description: 'Optimize heat dissipation and airflow in electronic systems with our advanced CFD simulations:',
-                    image: '',
-                    images: [ELECFD1, ELECFD2, ELECFD3, ELECFD4, ELECFD5, ELECFD6, ELECFD7],
+                    image: ELECFD1,
+                    //images: [ELECFD1, ELECFD2, ELECFD3, ELECFD4, ELECFD5, ELECFD6, ELECFD7],
                     bullets: [
                         'Microchip and Power Module Cooling: Simulate heat transfer to ensure efficient cooling and prevent overheating.',
                         'PCB Thermal Analysis: Identify hotspots and optimize electrical trace layouts to avoid thermal overlaps.',
