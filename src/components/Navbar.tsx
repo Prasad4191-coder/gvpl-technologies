@@ -5,12 +5,12 @@ import Button from './Button';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 
 const servicesLinks = [
-  { label: 'CAD Services', href: '/services/cad', description: 'Computer Aided Design (CAD) services.' },
-  { label: 'FEA Services', href: '/services/fea', description: 'Finite Element Analysis (FEA) for engineering.' },
-  { label: 'NPD Services', href: '/services/npd', description: 'New Product Development (NPD) solutions.' },
-  { label: 'PMC Services', href: '/services/pmc', description: 'Project Management & Consultation (PMC).' },
-  { label: 'RE Services', href: '/services/re', description: 'Reverse Engineering (RE) services.' },
   { label: 'CFD Services', href: '/services/cfd', description: 'Computational Fluid Dynamics (CFD) solutions.' },
+  { label: 'FEA Services', href: '/services/fea', description: 'Finite Element Analysis (FEA) for engineering.' },
+  { label: 'CAD Services', href: '/services/cad', description: 'Computer Aided Design (CAD) services.' },
+  { label: 'NPD Services', href: '/services/npd', description: 'New Product Development (NPD) solutions.' },
+  { label: 'RE Services', href: '/services/re', description: 'Reverse Engineering (RE) services.' },
+  { label: 'PMC Services', href: '/services/pmc', description: 'Project Management & Consultation (PMC).' },
 ];
 
 const industriesLinks = [
@@ -199,6 +199,7 @@ const Navbar = () => {
                 {visibleDropdown === 'services' && <DropdownMenu items={servicesLinks} multiColumn={servicesLinks.length > 4} columnsCount={2} />}
               </div>
             </div>
+            <Link to="/animation" className={`px-3 py-2 font-medium transition-colors ${isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none' : (isScrolled ? 'text-gray-700 hover:text-[#009DFF]' : 'text-white hover:text-[#009DFF]')}`}>Animation Studio</Link>
             {/* Industries Dropdown */}
             <div className="relative" onMouseEnter={() => setHoverDropdown('industries')} onMouseLeave={() => setHoverDropdown('')}>
               <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/industries') ? 'text-[#009DFF] font-bold pointer-events-none' : (isScrolled ? 'text-gray-700 hover:text-[#009DFF]' : 'text-white hover:text-[#009DFF]')}`}>
@@ -222,7 +223,6 @@ const Navbar = () => {
                 {visibleDropdown === 'industries' && <DropdownMenu items={industriesLinks} multiColumn={industriesLinks.length > 6} columnsCount={3} />}
               </div>
             </div>
-            <Link to="/animation" className={`px-3 py-2 font-medium transition-colors ${isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none' : (isScrolled ? 'text-gray-700 hover:text-[#009DFF]' : 'text-white hover:text-[#009DFF]')}`}>Animation Studio</Link>
             <Link to="/contact" className={`px-3 py-2 font-medium transition-colors ${isActive('/contact') ? 'text-[#009DFF] font-bold pointer-events-none' : (isScrolled ? 'text-gray-700 hover:text-[#009DFF]' : 'text-white hover:text-[#009DFF]')}`}>Contact Us</Link>
           </nav>
 
@@ -293,6 +293,14 @@ const Navbar = () => {
                 </div>
               </div>
 
+              <Link
+                to="/animation"
+                className={`text-3xl font-bold transition-colors ${isActive('/animation') ? 'text-[#009DFF]' : 'text-gray-900 hover:text-[#009DFF]'}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                Animation Studio
+              </Link>
+
               <div className="border-b border-gray-100 pb-4">
                 <button
                   onClick={() => setMobileDropdown(mobileDropdown === 'industries' ? '' : 'industries')}
@@ -330,13 +338,6 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
               >
                 Career
-              </Link>
-              <Link
-                to="/animation"
-                className={`text-3xl font-bold transition-colors ${isActive('/animation') ? 'text-[#009DFF]' : 'text-gray-900 hover:text-[#009DFF]'}`}
-                onClick={() => setMobileOpen(false)}
-              >
-                Animation Studio
               </Link>
               <Link
                 to="/contact"
