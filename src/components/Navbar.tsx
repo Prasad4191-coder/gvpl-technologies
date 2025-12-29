@@ -14,18 +14,18 @@ const servicesLinks = [
 ];
 
 const industriesLinks = [
+  { label: 'HVAC', href: '/industries/hvac', description: 'HVAC for various industries.' },
+  { label: 'Chemical', href: '/industries/chemical', description: 'Chemical for various industries.' },
   { label: 'Aerospace Engineering', href: '/industries/aerospace-engineering', description: 'Aerospace Engineering for various industries.' },
   { label: 'Automotive', href: '/industries/automotive', description: 'Automotive for various industries.' },
-  { label: 'Chemical', href: '/industries/chemical', description: 'Chemical for various industries.' },
-  { label: 'Defence', href: '/industries/defence', description: 'Defence for various industries.' },
-  { label: 'Diesel Generator', href: '/industries/diesel-generator', description: 'Diesel Generator for various industries.' },
-  { label: 'Electronics', href: '/industries/electronics', description: 'Electronics for various industries.' },
-  { label: 'Food', href: '/industries/food', description: 'Food for various industries.' },
-  { label: 'HVAC', href: '/industries/hvac', description: 'HVAC for various industries.' },
-  { label: 'Marine', href: '/industries/marine', description: 'Marine for various industries.' },
-  { label: 'Pharma', href: '/industries/pharma', description: 'Pharma for various industries.' },
   { label: 'Process', href: '/industries/process', description: 'Process for various industries.' },
-  { label: 'Real Estate', href: '/industries/real-estate', description: 'Real Estate for various industries.' }
+  { label: 'Real Estate', href: '/industries/real-estate', description: 'Real Estate for various industries.' },
+  { label: 'Defence', href: '/industries/defence', description: 'Defence for various industries.' },
+  { label: 'Electronics', href: '/industries/electronics', description: 'Electronics for various industries.' },
+  { label: 'Diesel Generator', href: '/industries/diesel-generator', description: 'Diesel Generator for various industries.' },
+  { label: 'Food', href: '/industries/food', description: 'Food for various industries.' },
+  { label: 'Marine', href: '/industries/marine', description: 'Marine for various industries.' },
+  { label: 'Pharma', href: '/industries/pharma', description: 'Pharma for various industries.' }
 ];
 
 const Navbar = () => {

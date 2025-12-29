@@ -16,7 +16,7 @@ const intro = [
 
 const features = [
   {
-    title: 'Deformulation Analysis',
+    title: 'Product Analysis',
     image: 'https://www.shutterstock.com/shutterstock/photos/71536909/display_1500/stock-photo-built-walls-of-a-house-on-construction-drawings-71536909.jpg',
     bullets: [
       'Component Identification: Utilizing sophisticated analytical methods, we break down products to identify their specifications.',
@@ -34,7 +34,7 @@ const features = [
     ],
   },
   {
-    title: 'Formulation Optimization',
+    title: 'Product Optimization',
     image: 'https://www.shutterstock.com/image-photo/software-proficiency-260nw-1939640737.jpg',
     bullets: [
       'Enhancing Availability: Modify products to improve the availability and effectiveness of the products.',
@@ -77,7 +77,7 @@ export default function CAD() {
       hero={hero}
       intro={intro}
       features={features}
-      featuresTitle="Our Pharmaceutical Reverse Engineering Services"
+      featuresTitle="Our Reverse Engineering Services"
       featuresDescription="Learn how People leaders everywhere transform their approach to performance, engagement, and development."
       benefits={benefits}
     />

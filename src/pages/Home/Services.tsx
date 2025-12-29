@@ -1,4 +1,9 @@
-import CAD from '@/assets/gvpl website images/Services/S - CAD/3D.png';
+import CAD from '@/assets/services-home-page/CAD.png';
+import FEA from '@/assets/services-home-page/FEA.png';
+import CFD from '@/assets/services-home-page/CFD.png';
+import RE from '@/assets/services-home-page/RE.png';
+import PM from '@/assets/services-home-page/PMC.png';
+import PND from '@/assets/services-home-page/NPD.png';
 
 const Services = () => {
   const services = [
@@ -20,17 +25,17 @@ const Services = () => {
     {
       title: "Reverse Engineering",
       description: "Precise digital reconstruction and analysis of existing products for optimization and improvement.",
-      image: "https://placehold.co/800x600/333333/FFFFFF/png?text=Reverse+Engineering"
+      image: RE
     },
     {
       title: "Project Management & Consultation",
       description: "Expert guidance and management for successful project execution and optimal results.",
-      image: "https://placehold.co/800x600/333333/FFFFFF/png?text=Project+Management"
+      image: PM
     },
     {
-      title: "Product Development",
+      title: "New Product Development",
       description: "End-to-end product development solutions from concept to manufacturing.",
-      image: "https://placehold.co/800x600/333333/FFFFFF/png?text=Product+Development"
+      image: PND
     }
   ];
 
