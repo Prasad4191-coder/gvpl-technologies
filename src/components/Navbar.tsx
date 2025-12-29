@@ -215,7 +215,7 @@ const Navbar = () => {
                 {visibleDropdown === 'services' && <DropdownMenu items={servicesLinks} multiColumn={servicesLinks.length > 4} columnsCount={2} />}
               </div>
             </div>
-            <Link to="/animation" className={`px-3 py-2 font-medium transition-colors ${isActive('/animation') ? 'text-[#009DFF] font-bold pointer-events-none' : (isScrolled ? 'text-gray-700 hover:text-[#009DFF]' : 'text-white hover:text-[#009DFF]')}`}>Animation Studio</Link>
+            <Link to="/services/animation-studio" className={`px-3 py-2 font-medium transition-colors ${isActive('/services/animation-studio') ? 'text-[#009DFF] font-bold pointer-events-none' : (isScrolled ? 'text-gray-700 hover:text-[#009DFF]' : 'text-white hover:text-[#009DFF]')}`}>Animation Studio</Link>
             {/* Industries Dropdown */}
             <div className="relative" onMouseEnter={() => setHoverDropdown('industries')} onMouseLeave={() => setHoverDropdown('')}>
               <button type="button" className={`px-3 py-2 flex items-center gap-1 font-medium transition-colors ${location.pathname.startsWith('/industries') ? 'text-[#009DFF] font-bold pointer-events-none' : (isScrolled ? 'text-gray-700 hover:text-[#009DFF]' : 'text-white hover:text-[#009DFF]')}`}>
@@ -310,8 +310,8 @@ const Navbar = () => {
               </div>
 
               <Link
-                to="/animation"
-                className={`text-3xl font-bold transition-colors ${isActive('/animation') ? 'text-[#009DFF]' : 'text-gray-900 hover:text-[#009DFF]'}`}
+                to="/services/animation-studio"
+                className={`text-3xl font-bold transition-colors ${isActive('/services/animation-studio') ? 'text-[#009DFF]' : 'text-gray-900 hover:text-[#009DFF]'}`}
                 onClick={() => setMobileOpen(false)}
               >
                 Animation Studio

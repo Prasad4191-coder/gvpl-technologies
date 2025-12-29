@@ -13,6 +13,7 @@ import PMC from './pages/Services/PMC';
 import RE from './pages/Services/RE';
 import ServiceCFD from './pages/Services/CFD';
 import ProductAnimation from './pages/Services/ProductAnimation';
+import AnimationStudio from './pages/Services/AnimationStudio';
 import AboutUs from './pages/AboutUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Careers from './pages/Careers';
@@ -130,6 +131,11 @@ function AppContent() {
           <Route path="/services/product-animation" element={
             <PageTransition>
               <ProductAnimation />
+            </PageTransition>
+          } />
+          <Route path="/services/animation-studio" element={
+            <PageTransition>
+              <AnimationStudio />
             </PageTransition>
           } />
           <Route path="/about" element={
