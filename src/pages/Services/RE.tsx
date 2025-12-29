@@ -3,7 +3,9 @@ import icon1 from '@/assets/icon/icon1.png';
 import icon2 from '@/assets/icon/icon2.png';
 import icon3 from '@/assets/icon/icon3.png';
 import icon5 from '@/assets/icon/icon5.png';
-
+import reProductAnalysis from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/RE/Product Analysis.png';
+import reComparativeProductAnalysis from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/RE/Comparative Product Analysis.png';
+import reProductOptimization from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/RE/Product Optimization.png';
 const hero = {
   image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
   title: 'Reverse Engineering Solutions',
@@ -17,7 +19,7 @@ const intro = [
 const features = [
   {
     title: 'Product Analysis',
-    image: 'https://www.shutterstock.com/shutterstock/photos/71536909/display_1500/stock-photo-built-walls-of-a-house-on-construction-drawings-71536909.jpg',
+    image: reProductAnalysis,
     bullets: [
       'Component Identification: Utilizing sophisticated analytical methods, we break down products to identify their specifications.',
       'Quantitative Analysis: Determine the precise concentration of each component to ensure accuracy.',
@@ -26,7 +28,7 @@ const features = [
   },
   {
     title: 'Comparative Product Analysis',
-    image: 'https://www.shutterstock.com/image-photo/2d-cad-drafting-260nw-1939640736.jpg',
+    image: reComparativeProductAnalysis,
     bullets: [
       'Benchmarking Studies: Compare your products against competitors to identify areas of improvement and innovation.',
       'Quality Assessment: Evaluate the quality and performance of existing products to ensure they meet industry standards.',
@@ -35,7 +37,7 @@ const features = [
   },
   {
     title: 'Product Optimization',
-    image: 'https://www.shutterstock.com/image-photo/software-proficiency-260nw-1939640737.jpg',
+    image: reProductOptimization,
     bullets: [
       'Enhancing Availability: Modify products to improve the availability and effectiveness of the products.',
       'Stability Testing: Conduct rigorous testing to ensure product stability under various environmental conditions.',

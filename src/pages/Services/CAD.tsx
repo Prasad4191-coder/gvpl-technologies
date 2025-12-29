@@ -5,8 +5,9 @@ import icon3 from '@/assets/icon/icon3.png';
 import icon4 from '@/assets/icon/icon4.png';
 import icon5 from '@/assets/icon/icon5.png';
 import cadPoster from '@/assets/gvpl website images/Services/S - CAD/Poster.png';
-import cad3D from '@/assets/gvpl website images/Services/S - CAD/3D.png';
-import cad2DDrafting from '@/assets/gvpl website images/Services/S - CAD/2DDrafting.png';
+import cad3D from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/CAD/Detailed 3D CAD Modeling.png';
+import cad2DDrafting from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/CAD/Precise 2D Drafting.png';
+import cadSoftwareProficiency from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/CAD/Software Proficiency.png';
 
 const hero = {
   image: cadPoster,
@@ -39,7 +40,7 @@ const features = [
   },
   {
     title: 'Software Proficiency',
-    image: 'https://www.shutterstock.com/image-photo/software-proficiency-260nw-1939640737.jpg',
+    image: cadSoftwareProficiency,
     bullets: [
       'Expertise in leading CAD software such as AutoCAD, SolidWorks, CATIA, and more.',
       'Efficient design iteration and streamlined documentation processes.',

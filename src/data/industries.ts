@@ -183,6 +183,7 @@ import PROFEA4 from '@/assets/gvpl website images/Industries/I-Process/Process I
 import PROFEA5 from '@/assets/gvpl website images/Industries/I-Process/Process Images GTG/FEA/FEA Process  (5).png';
 import PROFEA6 from '@/assets/gvpl website images/Industries/I-Process/Process Images GTG/FEA/FEA Process  (6).png';
 
+import PROIMG1 from '@/assets/gvpl website images/Services/S - CAD/3D.png';
 // Real Estate images
 import REHVAC1 from '@/assets/gvpl website images/Industries/I-Real Estate/Real Estate Images GTG/HVAC Ventilation Smoke Watermanagement/HVAC Ventilation Smoke WaterMgmt  (1).png';
 import REHVAC2 from '@/assets/gvpl website images/Industries/I-Real Estate/Real Estate Images GTG/HVAC Ventilation Smoke Watermanagement/HVAC Ventilation Smoke WaterMgmt  (2).png';
@@ -226,7 +227,7 @@ export const industries = [
                 {
                     title: 'Finite Element Analysis (FEA)',
                     description: '',
-                    image: AECFD2,
+                    image: AEFEA1,
                     //images: [AEFEA1, AEFEA2, AEFEA3, AEFEA4, AEFEA5, AEFEA6],
                     bullets: [
                         'Thermal Analysis: Visualize and predict heat transfer between fluids and equipment surfaces.',
@@ -748,7 +749,7 @@ export const industries = [
                 {
                     title: 'Acoustic Analysis',
                     description: 'Minimize noise levels and ensure compliance with environmental standards using advanced acoustic simulations:',
-                    image: DIECFD2,
+                    image: DIEAA4,
                     //images: [DIEAA1, DIEAA2, DIEAA3, DIEAA4],
                     bullets: [
                         'Noise Level Measurement: Quantify sound intensity at various distances from DG sets.',
@@ -1135,7 +1136,7 @@ export const industries = [
                 {
                     title: 'Structural Integrity and Vibration Analysis',
                     description: 'Ensure the durability and quiet operation of HVAC equipment:',
-                    image: HVACSI4,
+                    image: HVACSI1,
                     // images: [HVACSI1, HVACSI2, HVACSI3, HVACSI4],
                     bullets: [
                         'Ductwork Analysis: Assess stress and deformation under pressure and thermal loads.',
@@ -1465,7 +1466,7 @@ export const industries = [
                 {
                     title: 'Design and Drafting',
                     description: 'Comprehensive design services for process equipment:',
-                    image: PROCFD5,
+                    image: PROIMG1,
                     //images: [PROCFD1], // Placeholder
                     bullets: [
                         'Detailed Engineering: Create fabrication drawings and P&IDs.',

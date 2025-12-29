@@ -5,6 +5,11 @@ import icon3 from '@/assets/icon/icon3.png';
 import icon4 from '@/assets/icon/icon4.png';
 import icon5 from '@/assets/icon/icon5.png';
 import icn from '@/assets/Pages/CFD/Icon/icon1.png';
+import cfdFluidPressureDropAnalysis from '@/assets/gvpl website images/Industries/I-Process/Process Images GTG/CFD/CFD Process  (2).png';
+import cfdThermalManagementSolutions from '@/assets/gvpl website images/Industries/I-HAVC/HVAC Images GTG/Airflow Analysis and Thermal Management/Airflow Analysis HVAC (2).png';
+import cfdAerodynamicAnalysis from '@/assets/gvpl website images/Industries/I - Aerospace Engineering/Aerospace Images GTG/CFD/Aerospace CFD  (2).png';
+import cfdEnvironmentalAndHVACSolutions from '@/assets/gvpl website images/Industries/I-HAVC/HVAC Images GTG/Airflow Analysis and Thermal Management/Airflow Analysis HVAC (4).png';
+
 
 
 
@@ -21,7 +26,7 @@ const intro = [
 const features = [
   {
     title: 'Industrial Equipment & Process Optimization',
-    image: 'https://www.shutterstock.com/shutterstock/photos/71536909/display_1500/stock-photo-built-walls-of-a-house-on-construction-drawings-71536909.jpg',
+    image: cfdFluidPressureDropAnalysis,
     bullets: [
       'Valve Flow Analysis: Improve pressure regulation and minimize losses in fluid control systems.',
       'Pump & Turbine Flow Analysis: Enhance energy efficiency and reduce cavitation risks.',
@@ -31,7 +36,7 @@ const features = [
   },
   {
     title: 'Thermal Management Solutions',
-    image: 'https://www.shutterstock.com/image-photo/2d-cad-drafting-260nw-1939640736.jpg',
+    image: cfdThermalManagementSolutions,
     bullets: [
       'Battery Pack Thermal Analysis: Ensure optimal temperature regulation in electric vehicle (EV) and industrial batteries.',
       'Diesel Generator (DG) Set Thermal Analysis: Prevent overheating and increase operational efficiency.',
@@ -41,7 +46,7 @@ const features = [
   },
   {
     title: 'Aerospace & Automotive CFD Applications',
-    image: 'https://www.shutterstock.com/image-photo/software-proficiency-260nw-1939640737.jpg',
+    image: cfdAerodynamicAnalysis,
     bullets: [
       'Cabin Flow & Thermal Analysis: Improve passenger comfort and HVAC performance in vehicles and aircraft.',
       'Aerodynamic Analysis: Optimize airflow around automotive and aircraft designs for reduced drag and improved fuel efficiency.',
@@ -51,7 +56,7 @@ const features = [
   },
   {
     title: 'Environmental & HVAC Solutions',
-    image: 'https://www.shutterstock.com/image-photo/software-proficiency-260nw-1939640737.jpg',
+    image: cfdEnvironmentalAndHVACSolutions,
     bullets: [
       'Pollution Control in Buildings: Design effective air filtration and ventilation systems for improved indoor air quality.',
       'Thermal & Flow Analysis for Cleanrooms: Ensure contamination-free environments in pharmaceutical and semiconductor manufacturing.',

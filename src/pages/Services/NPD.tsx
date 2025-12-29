@@ -2,6 +2,11 @@ import ServicePage from '../../components/ServicePage';
 import icon1 from '@/assets/icon/icon1.png';
 import icon2 from '@/assets/icon/icon2.png';
 import icon4 from '@/assets/icon/icon4.png';
+import npdPoster from '@/assets/gvpl website images/Services/S - NPD/Poster.png';
+import npdMarketResearch from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/NPD/Market Research & Idea Generation.png';
+import npdConceptDesign from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/NPD/Concept Design & Feasibility Analysis.png';
+import npdDetailedEngineering from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/NPD/Detailed Engineering & Prototyping.png';
+import npdTestingValidation from '@/assets/gvpl website images/Services/Services Page Images/Services Page Images/NPD/Testing & Validation.png';
 
 const hero = {
   image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
@@ -16,7 +21,7 @@ const intro = [
 const features = [
   {
     title: 'Market Research & Idea Generation',
-    image: 'https://www.shutterstock.com/shutterstock/photos/71536909/display_1500/stock-photo-built-walls-of-a-house-on-construction-drawings-71536909.jpg',
+    image: npdMarketResearch,
     bullets: [
       'In-Depth Market Analysis: Conduct comprehensive research to identify market trends, customer needs, and competitive landscapes, laying the foundation for informed product development.',
       'Ideation Workshops: Facilitate creative sessions to generate innovative product ideas aligned with your business objectives and market opportunities.',
@@ -24,7 +29,7 @@ const features = [
   },
   {
     title: 'Concept Design & Feasibility Analysis',
-    image: 'https://www.shutterstock.com/image-photo/2d-cad-drafting-260nw-1939640736.jpg',
+    image: npdConceptDesign,
     bullets: [
       'Conceptual Modelling: Develop initial design concepts using advanced CAD tools to visualize product features and aesthetics.',
       'Feasibility Studies: Assess technical and financial viability through simulations, prototyping, and cost analysis to ensure the concept meets performance and budgetary requirements.'
@@ -32,7 +37,7 @@ const features = [
   },
   {
     title: 'Detailed Engineering & Prototyping',
-    image: 'https://www.shutterstock.com/image-photo/software-proficiency-260nw-1939640737.jpg',
+    image: npdDetailedEngineering,
     bullets: [
       '3D Modeling and Simulation: Create detailed 3D models and perform simulations to optimize design parameters and functionality.',
       'Prototype Development: Build functional prototypes for testing and validation, allowing for iterative improvements and refinement.',
@@ -40,7 +45,7 @@ const features = [
   },
   {
     title: 'Testing & Validation',
-    image: 'https://www.shutterstock.com/image-photo/software-proficiency-260nw-1939640737.jpg',
+    image: npdTestingValidation,
     bullets: [
       'Production Planning: Develop detailed manufacturing plans, including process selection, tooling design, and supply chain coordination.',
       'Market Launch Support: Provide assistance with marketing strategies, distribution planning, and post-launch monitoring to ensure successful product introduction.',

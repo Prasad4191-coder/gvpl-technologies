@@ -4,8 +4,21 @@ import CFD from '@/assets/services-home-page/CFD.png';
 import RE from '@/assets/services-home-page/RE.png';
 import PM from '@/assets/services-home-page/PMC.png';
 import PND from '@/assets/services-home-page/NPD.png';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  // Mapping of service titles to their routes
+  const serviceRoutes: { [key: string]: string } = {
+    "Computer Aided Design": "/services/cad",
+    "Finite Element Analysis": "/services/fea",
+    "Computational Fluid Dynamics": "/services/cfd",
+    "Reverse Engineering": "/services/re",
+    "Project Management & Consultation": "/services/pmc",
+    "New Product Development": "/services/npd"
+  };
+
   const services = [
     {
       title: "Computer Aided Design",
@@ -44,33 +57,45 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-4xl font-bold">Our Services</h2>
-          <button className="text-[#00B1FF] border border-[#00B1FF] px-6 py-2 rounded-lg hover:bg-[#00B1FF] hover:text-white transition-all">
+          {/*<button
+            onClick={() => {
+              // Scroll to top
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              // Dispatch custom event to trigger navbar dropdown
+              setTimeout(() => {
+                window.dispatchEvent(new CustomEvent('showServicesDropdown'));
+              }, 500);
+            }}
+            className="text-[#00B1FF] border border-[#00B1FF] px-6 py-2 rounded-lg hover:bg-[#00B1FF] hover:text-white transition-all"
+          >
             See All Services
           </button>
+          */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
+              onClick={() => navigate(serviceRoutes[service.title])}
               className="group relative overflow-hidden rounded-2xl cursor-pointer h-[300px]"
             >
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover pointer-events-none"
               />
               {/* Blue gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#00B1FF] to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#00B1FF] to-transparent opacity-90 pointer-events-none" />
 
               {/* Description overlay - visible on hover */}
-              <div className="absolute inset-0 bg-[#00B1FF]/90 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-[#00B1FF]/90 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                 <p className="text-white text-base line-clamp-5">
                   {service.description}
                 </p>
               </div>
 
               {/* Title container - always visible */}
-              <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#00B1FF] to-transparent">
+              <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#00B1FF] to-transparent pointer-events-none">
                 <div className="flex justify-between items-center">
                   <h3 className="text-white text-2xl font-semibold">
                     {service.title}

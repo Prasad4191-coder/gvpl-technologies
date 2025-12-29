@@ -47,6 +47,22 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Listen for custom event to show services dropdown
+  useEffect(() => {
+    const handleShowServicesDropdown = () => {
+      setHoverDropdown('services');
+      setVisibleDropdown('services');
+      // Auto-hide after 5 seconds
+      setTimeout(() => {
+        setHoverDropdown('');
+      }, 5000);
+    };
+
+    window.addEventListener('showServicesDropdown', handleShowServicesDropdown);
+    return () => window.removeEventListener('showServicesDropdown', handleShowServicesDropdown);
+  }, []);
+
+
 
   // Smooth transition for dropdown switching
   React.useEffect(() => {
